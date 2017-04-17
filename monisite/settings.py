@@ -24,6 +24,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'orm',
     'xadmin',
     'crispy_forms',
 ]
@@ -70,7 +71,7 @@ DATABASES = {
         'NAME':"monidb",
         'USER':'root',
         'PASSWORD':"simba2016",
-        'HOST':"127.0.0.1"
+        'HOST':"10.200.8.106"
      }
 }
 
