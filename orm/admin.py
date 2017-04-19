@@ -15,4 +15,10 @@ class RepQueueAdmin(admin.ModelAdmin):
             obj.save()
 
 
+class SysLogsAdmin(admin.ModelAdmin):
+    list_display = ['logs','errs','add_time']
+
+
+
 admin.site.register(rep_queue,RepQueueAdmin)
+admin.site.register(sys_logs,SysLogsAdmin)

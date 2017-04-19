@@ -1,0 +1,17 @@
+Wed, 19 Apr 2017 16:25:01 base.py[line:431] INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+Wed, 19 Apr 2017 16:25:01 base.py[line:865] INFO Added job "GetQueueId" to job store "default"
+Wed, 19 Apr 2017 16:25:01 base.py[line:158] INFO Scheduler started
+Wed, 19 Apr 2017 16:25:01 base.py[line:924] DEBUG Looking for jobs to run
+Wed, 19 Apr 2017 16:25:01 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-19 16:25:03.347000+08:00 (in 1.999000 seconds)
+Wed, 19 Apr 2017 16:25:03 base.py[line:924] DEBUG Looking for jobs to run
+Wed, 19 Apr 2017 16:25:03 base.py[line:123] INFO Running job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-19 16:25:05 CST)" (scheduled at 2017-04-19 16:25:03.347000+08:00)
+Wed, 19 Apr 2017 16:25:03 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-19 16:25:05.347000+08:00 (in 1.999000 seconds)
+Wed, 19 Apr 2017 16:25:03 CollectSched.py[line:16] INFO connect to database
+Wed, 19 Apr 2017 16:25:03 CollectSched.py[line:30] INFO connection of database closed complete!
+Wed, 19 Apr 2017 16:25:03 base.py[line:135] INFO Job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-19 16:25:05 CST)" executed successfully
+Wed, 19 Apr 2017 16:25:05 base.py[line:924] DEBUG Looking for jobs to run
+Wed, 19 Apr 2017 16:25:05 base.py[line:123] INFO Running job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-19 16:25:05 CST)" (scheduled at 2017-04-19 16:25:05.347000+08:00)
+Wed, 19 Apr 2017 16:25:05 CollectSched.py[line:16] INFO connect to database
+Wed, 19 Apr 2017 16:25:05 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-19 16:25:07.347000+08:00 (in 1.996000 seconds)
+Wed, 19 Apr 2017 16:25:05 CollectSched.py[line:30] INFO connection of database closed complete!
+Wed, 19 Apr 2017 16:25:05 base.py[line:135] INFO Job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-19 16:25:07 CST)" executed successfully
