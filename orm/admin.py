@@ -8,9 +8,10 @@ class RepQueueAdmin(admin.ModelAdmin):
     list_display = ['describe','src_ip','src_path','tgt_ip','tgt_path', 'add_user','add_time']
     # list_editable = ['describe','src_ip','src_path','tgt_ip','tgt_path', 'add_time']
     def save_model(self, request, obj, form, change):
-        print request.user
+        print '==================================='
+        print type(request.user)
         if getattr(obj,'add_user',None):
-            obj.add_user=request.user
+            obj.add_user=request.user.username
             print 'obj.add_user:',obj.add_user
             obj.save()
 

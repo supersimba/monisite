@@ -16,11 +16,15 @@ class rep_queue(models.Model):
     src_path=models.CharField(max_length=100,blank=False,verbose_name=u'源端路径')
     src_ssh_user=models.CharField(max_length=20,blank=False,verbose_name=u'源端ssh用户名')
     src_ssh_pwd = models.CharField(max_length=20, blank=False, verbose_name=u'源端ssh密码')
+    src_ssh_status=models.IntegerField(verbose_name=u'源端ssh连通状态',default=0)
+    src_path_status = models.IntegerField(verbose_name=u'源端目录状态', default=0)
     tgt_ip=models.GenericIPAddressField(blank=False,verbose_name=u'目标端IP')
     tgt_path = models.CharField(max_length=100, blank=False, verbose_name=u'目标端路径')
     tgt_ssh_user = models.CharField(max_length=20, blank=False, verbose_name=u'目标端ssh用户名')
     tgt_ssh_pwd = models.CharField(max_length=20, blank=False, verbose_name=u'目标端ssh密码')
-    add_user=models.CharField(max_length=50,blank=False,verbose_name=u'添加用户',default=u'---------')
+    tgt_ssh_status = models.IntegerField(verbose_name=u'目标端ssh连通状态', default=0)
+    tgt_path_status = models.IntegerField(verbose_name=u'目标目录状态', default=0)
+    add_user=models.CharField(max_length=50,verbose_name=u'添加用户',default=u'---------')
     add_time=models.DateTimeField(verbose_name=u'信息添加时间',default=datetime.datetime.now)
 
     objects=models.Manager()
@@ -30,6 +34,13 @@ class rep_queue(models.Model):
         db_table='rep_queue'
         verbose_name=u'队列配置表'
         verbose_name_plural=verbose_name
+
+
+
+# class src_moni_info(models.Model):
+#     sid=models.AutoField(primary_key=True)
+#     dbps_cnt=models.IntegerField(verbose_name=u'dbps进程数')
+#     capture_cnt=models.IntegerField(verbose_name=u'分析进程数')
 
 
 class sys_logs(models.Model):

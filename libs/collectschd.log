@@ -1,17 +1,437 @@
-Wed, 19 Apr 2017 16:25:01 base.py[line:431] INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
-Wed, 19 Apr 2017 16:25:01 base.py[line:865] INFO Added job "GetQueueId" to job store "default"
-Wed, 19 Apr 2017 16:25:01 base.py[line:158] INFO Scheduler started
-Wed, 19 Apr 2017 16:25:01 base.py[line:924] DEBUG Looking for jobs to run
-Wed, 19 Apr 2017 16:25:01 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-19 16:25:03.347000+08:00 (in 1.999000 seconds)
-Wed, 19 Apr 2017 16:25:03 base.py[line:924] DEBUG Looking for jobs to run
-Wed, 19 Apr 2017 16:25:03 base.py[line:123] INFO Running job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-19 16:25:05 CST)" (scheduled at 2017-04-19 16:25:03.347000+08:00)
-Wed, 19 Apr 2017 16:25:03 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-19 16:25:05.347000+08:00 (in 1.999000 seconds)
-Wed, 19 Apr 2017 16:25:03 CollectSched.py[line:16] INFO connect to database
-Wed, 19 Apr 2017 16:25:03 CollectSched.py[line:30] INFO connection of database closed complete!
-Wed, 19 Apr 2017 16:25:03 base.py[line:135] INFO Job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-19 16:25:05 CST)" executed successfully
-Wed, 19 Apr 2017 16:25:05 base.py[line:924] DEBUG Looking for jobs to run
-Wed, 19 Apr 2017 16:25:05 base.py[line:123] INFO Running job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-19 16:25:05 CST)" (scheduled at 2017-04-19 16:25:05.347000+08:00)
-Wed, 19 Apr 2017 16:25:05 CollectSched.py[line:16] INFO connect to database
-Wed, 19 Apr 2017 16:25:05 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-19 16:25:07.347000+08:00 (in 1.996000 seconds)
-Wed, 19 Apr 2017 16:25:05 CollectSched.py[line:30] INFO connection of database closed complete!
-Wed, 19 Apr 2017 16:25:05 base.py[line:135] INFO Job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-19 16:25:07 CST)" executed successfully
+Thu, 20 Apr 2017 14:45:40 base.py[line:431] INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+Thu, 20 Apr 2017 14:45:40 base.py[line:865] INFO Added job "GetQueueId" to job store "default"
+Thu, 20 Apr 2017 14:45:40 base.py[line:158] INFO Scheduler started
+Thu, 20 Apr 2017 14:45:40 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:45:40 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:45:42.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:45:42 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:45:42 base.py[line:123] INFO Running job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:45:44 CST)" (scheduled at 2017-04-20 14:45:42.160000+08:00)
+Thu, 20 Apr 2017 14:45:42 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:45:44.160000+08:00 (in 2.000000 seconds)
+Thu, 20 Apr 2017 14:45:42 CollectSched.py[line:19] INFO connect to database
+Thu, 20 Apr 2017 14:45:42 CollectSched.py[line:28] INFO connection of database closed complete!
+Thu, 20 Apr 2017 14:45:42 transport.py[line:1561] DEBUG starting thread (client mode): 0x34b7278L
+Thu, 20 Apr 2017 14:45:42 transport.py[line:1561] DEBUG Local version/idstring: SSH-2.0-paramiko_2.0.1
+Thu, 20 Apr 2017 14:45:42 transport.py[line:1561] DEBUG Remote version/idstring: SSH-2.0-OpenSSH_5.3
+Thu, 20 Apr 2017 14:45:42 transport.py[line:1561] INFO Connected (version 2.0, client OpenSSH_5.3)
+Thu, 20 Apr 2017 14:45:42 transport.py[line:1561] DEBUG kex algos:[u'diffie-hellman-group-exchange-sha256', u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group14-sha1', u'diffie-hellman-group1-sha1'] server key:[u'ssh-rsa', u'ssh-dss'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] client mac:[u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] server mac:[u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
+Thu, 20 Apr 2017 14:45:42 transport.py[line:1561] DEBUG Kex agreed: diffie-hellman-group1-sha1
+Thu, 20 Apr 2017 14:45:42 transport.py[line:1561] DEBUG Cipher agreed: aes128-ctr
+Thu, 20 Apr 2017 14:45:42 transport.py[line:1561] DEBUG MAC agreed: hmac-sha2-256
+Thu, 20 Apr 2017 14:45:42 transport.py[line:1561] DEBUG Compression agreed: none
+Thu, 20 Apr 2017 14:45:42 transport.py[line:1561] DEBUG kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
+Thu, 20 Apr 2017 14:45:42 transport.py[line:1561] DEBUG Switch to new keys ...
+Thu, 20 Apr 2017 14:45:42 transport.py[line:1561] DEBUG Adding ssh-rsa host key for 10.200.8.106: 6fc021533e922ce067955cc5503d393a
+Thu, 20 Apr 2017 14:45:42 transport.py[line:1561] DEBUG userauth is OK
+Thu, 20 Apr 2017 14:45:42 transport.py[line:1561] INFO Authentication (password) successful!
+Thu, 20 Apr 2017 14:45:42 transport.py[line:1561] DEBUG EOF in transport thread
+Thu, 20 Apr 2017 14:45:42 transport.py[line:1561] DEBUG starting thread (client mode): 0x34b71d0L
+Thu, 20 Apr 2017 14:45:42 transport.py[line:1561] DEBUG Local version/idstring: SSH-2.0-paramiko_2.0.1
+Thu, 20 Apr 2017 14:45:42 transport.py[line:1561] DEBUG Remote version/idstring: SSH-2.0-OpenSSH_5.3
+Thu, 20 Apr 2017 14:45:42 transport.py[line:1561] INFO Connected (version 2.0, client OpenSSH_5.3)
+Thu, 20 Apr 2017 14:45:42 transport.py[line:1561] DEBUG kex algos:[u'diffie-hellman-group-exchange-sha256', u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group14-sha1', u'diffie-hellman-group1-sha1'] server key:[u'ssh-rsa', u'ssh-dss'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] client mac:[u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] server mac:[u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
+Thu, 20 Apr 2017 14:45:42 transport.py[line:1561] DEBUG Kex agreed: diffie-hellman-group1-sha1
+Thu, 20 Apr 2017 14:45:42 transport.py[line:1561] DEBUG Cipher agreed: aes128-ctr
+Thu, 20 Apr 2017 14:45:42 transport.py[line:1561] DEBUG MAC agreed: hmac-sha2-256
+Thu, 20 Apr 2017 14:45:42 transport.py[line:1561] DEBUG Compression agreed: none
+Thu, 20 Apr 2017 14:45:42 transport.py[line:1561] DEBUG kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
+Thu, 20 Apr 2017 14:45:42 transport.py[line:1561] DEBUG Switch to new keys ...
+Thu, 20 Apr 2017 14:45:42 transport.py[line:1561] DEBUG Adding ssh-rsa host key for 10.200.8.106: 6fc021533e922ce067955cc5503d393a
+Thu, 20 Apr 2017 14:45:42 transport.py[line:1561] DEBUG userauth is OK
+Thu, 20 Apr 2017 14:45:44 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:45:44 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:45:44 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:45:44 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:45:46.160000+08:00 (in 1.998000 seconds)
+Thu, 20 Apr 2017 14:45:46 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:45:46 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:45:46 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:45:46 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:45:48.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:45:48 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:45:48 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:45:48 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:45:48 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:45:50.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:45:50 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:45:50 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:45:50 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:45:50 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:45:52.160000+08:00 (in 1.997000 seconds)
+Thu, 20 Apr 2017 14:45:52 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:45:52 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:45:52 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:45:52 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:45:54.160000+08:00 (in 2.000000 seconds)
+Thu, 20 Apr 2017 14:45:52 transport.py[line:1561] INFO Authentication (password) successful!
+Thu, 20 Apr 2017 14:45:52 transport.py[line:1561] DEBUG EOF in transport thread
+Thu, 20 Apr 2017 14:45:54 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:45:54 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:45:54 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:45:54 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:45:56.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:45:56 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:45:56 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:45:56 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:45:56 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:45:58.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:45:58 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:45:58 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:45:58 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:45:58 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:46:00.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:46:00 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:46:00 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:46:00 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:46:00 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:46:02.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:46:02 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:46:02 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:46:02 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:46:02 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:46:04.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:46:04 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:46:04 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:46:04 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:46:04 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:46:06.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:46:06 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:46:06 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:46:06 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:46:06 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:46:08.160000+08:00 (in 2.000000 seconds)
+Thu, 20 Apr 2017 14:46:08 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:46:08 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:46:08 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:46:08 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:46:10.160000+08:00 (in 1.998000 seconds)
+Thu, 20 Apr 2017 14:46:10 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:46:10 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:46:10 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:46:10 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:46:12.160000+08:00 (in 2.000000 seconds)
+Thu, 20 Apr 2017 14:46:12 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:46:12 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:46:12 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:46:12 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:46:14.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:46:13 base.py[line:135] INFO Job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:46:14 CST)" executed successfully
+Thu, 20 Apr 2017 14:46:14 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:46:14 base.py[line:123] INFO Running job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:46:16 CST)" (scheduled at 2017-04-20 14:46:14.160000+08:00)
+Thu, 20 Apr 2017 14:46:14 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:46:16.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:46:14 CollectSched.py[line:19] INFO connect to database
+Thu, 20 Apr 2017 14:46:14 CollectSched.py[line:28] INFO connection of database closed complete!
+Thu, 20 Apr 2017 14:46:14 transport.py[line:1561] DEBUG starting thread (client mode): 0x34b74a8L
+Thu, 20 Apr 2017 14:46:14 transport.py[line:1561] DEBUG Local version/idstring: SSH-2.0-paramiko_2.0.1
+Thu, 20 Apr 2017 14:46:14 transport.py[line:1561] DEBUG Remote version/idstring: SSH-2.0-OpenSSH_5.3
+Thu, 20 Apr 2017 14:46:14 transport.py[line:1561] INFO Connected (version 2.0, client OpenSSH_5.3)
+Thu, 20 Apr 2017 14:46:14 transport.py[line:1561] DEBUG kex algos:[u'diffie-hellman-group-exchange-sha256', u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group14-sha1', u'diffie-hellman-group1-sha1'] server key:[u'ssh-rsa', u'ssh-dss'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] client mac:[u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] server mac:[u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
+Thu, 20 Apr 2017 14:46:14 transport.py[line:1561] DEBUG Kex agreed: diffie-hellman-group1-sha1
+Thu, 20 Apr 2017 14:46:14 transport.py[line:1561] DEBUG Cipher agreed: aes128-ctr
+Thu, 20 Apr 2017 14:46:14 transport.py[line:1561] DEBUG MAC agreed: hmac-sha2-256
+Thu, 20 Apr 2017 14:46:14 transport.py[line:1561] DEBUG Compression agreed: none
+Thu, 20 Apr 2017 14:46:14 transport.py[line:1561] DEBUG kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
+Thu, 20 Apr 2017 14:46:14 transport.py[line:1561] DEBUG Switch to new keys ...
+Thu, 20 Apr 2017 14:46:14 transport.py[line:1561] DEBUG Adding ssh-rsa host key for 10.200.8.106: 6fc021533e922ce067955cc5503d393a
+Thu, 20 Apr 2017 14:46:14 transport.py[line:1561] DEBUG userauth is OK
+Thu, 20 Apr 2017 14:46:16 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:46:16 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:46:16 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:46:16 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:46:18.160000+08:00 (in 1.995000 seconds)
+Thu, 20 Apr 2017 14:46:18 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:46:18 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:46:18 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:46:18 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:46:20.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:46:20 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:46:20 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:46:20 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:46:20 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:46:22.160000+08:00 (in 2.000000 seconds)
+Thu, 20 Apr 2017 14:46:22 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:46:22 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:46:22 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:46:22 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:46:24.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:46:24 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:46:24 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:46:24 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:46:24 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:46:26.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:46:24 transport.py[line:1561] INFO Authentication (password) successful!
+Thu, 20 Apr 2017 14:46:24 transport.py[line:1561] DEBUG EOF in transport thread
+Thu, 20 Apr 2017 14:46:24 transport.py[line:1561] DEBUG starting thread (client mode): 0x34b7240L
+Thu, 20 Apr 2017 14:46:24 transport.py[line:1561] DEBUG Local version/idstring: SSH-2.0-paramiko_2.0.1
+Thu, 20 Apr 2017 14:46:24 transport.py[line:1561] DEBUG Remote version/idstring: SSH-2.0-OpenSSH_5.3
+Thu, 20 Apr 2017 14:46:24 transport.py[line:1561] INFO Connected (version 2.0, client OpenSSH_5.3)
+Thu, 20 Apr 2017 14:46:24 transport.py[line:1561] DEBUG kex algos:[u'diffie-hellman-group-exchange-sha256', u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group14-sha1', u'diffie-hellman-group1-sha1'] server key:[u'ssh-rsa', u'ssh-dss'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] client mac:[u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] server mac:[u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
+Thu, 20 Apr 2017 14:46:24 transport.py[line:1561] DEBUG Kex agreed: diffie-hellman-group1-sha1
+Thu, 20 Apr 2017 14:46:24 transport.py[line:1561] DEBUG Cipher agreed: aes128-ctr
+Thu, 20 Apr 2017 14:46:24 transport.py[line:1561] DEBUG MAC agreed: hmac-sha2-256
+Thu, 20 Apr 2017 14:46:24 transport.py[line:1561] DEBUG Compression agreed: none
+Thu, 20 Apr 2017 14:46:24 transport.py[line:1561] DEBUG kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
+Thu, 20 Apr 2017 14:46:24 transport.py[line:1561] DEBUG Switch to new keys ...
+Thu, 20 Apr 2017 14:46:24 transport.py[line:1561] DEBUG Adding ssh-rsa host key for 10.200.8.106: 6fc021533e922ce067955cc5503d393a
+Thu, 20 Apr 2017 14:46:24 transport.py[line:1561] DEBUG userauth is OK
+Thu, 20 Apr 2017 14:46:26 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:46:26 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:46:26 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:46:26 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:46:28.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:46:28 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:46:28 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:46:28 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:46:28 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:46:30.160000+08:00 (in 1.997000 seconds)
+Thu, 20 Apr 2017 14:46:30 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:46:30 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:46:30 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:46:30 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:46:32.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:46:32 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:46:32 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:46:32 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:46:32 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:46:34.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:46:34 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:46:34 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:46:34 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:46:34 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:46:36.160000+08:00 (in 2.000000 seconds)
+Thu, 20 Apr 2017 14:46:34 transport.py[line:1561] INFO Authentication (password) successful!
+Thu, 20 Apr 2017 14:46:34 transport.py[line:1561] DEBUG EOF in transport thread
+Thu, 20 Apr 2017 14:46:36 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:46:36 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:46:36 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:46:36 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:46:38.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:46:38 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:46:38 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:46:38 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:46:38 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:46:40.160000+08:00 (in 2.000000 seconds)
+Thu, 20 Apr 2017 14:46:40 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:46:40 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:46:40 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:46:40 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:46:42.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:46:42 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:46:42 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:46:42 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:46:42 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:46:44.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:46:44 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:46:44 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:46:44 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:46:44 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:46:46.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:46:46 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:46:46 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:46:46 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:46:46 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:46:48.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:46:48 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:46:48 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:46:48 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:46:48 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:46:50.160000+08:00 (in 2.000000 seconds)
+Thu, 20 Apr 2017 14:46:50 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:46:50 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:46:50 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:46:50 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:46:52.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:46:52 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:46:52 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:46:52 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:46:52 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:46:54.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:46:54 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:46:54 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:46:54 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:46:54 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:46:56.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:46:55 base.py[line:135] INFO Job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:46:56 CST)" executed successfully
+Thu, 20 Apr 2017 14:46:56 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:46:56 base.py[line:123] INFO Running job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:46:56 CST)" (scheduled at 2017-04-20 14:46:56.160000+08:00)
+Thu, 20 Apr 2017 14:46:56 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:46:58.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:46:56 CollectSched.py[line:19] INFO connect to database
+Thu, 20 Apr 2017 14:46:56 CollectSched.py[line:28] INFO connection of database closed complete!
+Thu, 20 Apr 2017 14:46:56 transport.py[line:1561] DEBUG starting thread (client mode): 0x34b7358L
+Thu, 20 Apr 2017 14:46:56 transport.py[line:1561] DEBUG Local version/idstring: SSH-2.0-paramiko_2.0.1
+Thu, 20 Apr 2017 14:46:56 transport.py[line:1561] DEBUG Remote version/idstring: SSH-2.0-OpenSSH_5.3
+Thu, 20 Apr 2017 14:46:56 transport.py[line:1561] INFO Connected (version 2.0, client OpenSSH_5.3)
+Thu, 20 Apr 2017 14:46:56 transport.py[line:1561] DEBUG kex algos:[u'diffie-hellman-group-exchange-sha256', u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group14-sha1', u'diffie-hellman-group1-sha1'] server key:[u'ssh-rsa', u'ssh-dss'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] client mac:[u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] server mac:[u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
+Thu, 20 Apr 2017 14:46:56 transport.py[line:1561] DEBUG Kex agreed: diffie-hellman-group1-sha1
+Thu, 20 Apr 2017 14:46:56 transport.py[line:1561] DEBUG Cipher agreed: aes128-ctr
+Thu, 20 Apr 2017 14:46:56 transport.py[line:1561] DEBUG MAC agreed: hmac-sha2-256
+Thu, 20 Apr 2017 14:46:56 transport.py[line:1561] DEBUG Compression agreed: none
+Thu, 20 Apr 2017 14:46:56 transport.py[line:1561] DEBUG kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
+Thu, 20 Apr 2017 14:46:56 transport.py[line:1561] DEBUG Switch to new keys ...
+Thu, 20 Apr 2017 14:46:56 transport.py[line:1561] DEBUG Adding ssh-rsa host key for 10.200.8.106: 6fc021533e922ce067955cc5503d393a
+Thu, 20 Apr 2017 14:46:56 transport.py[line:1561] DEBUG userauth is OK
+Thu, 20 Apr 2017 14:46:58 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:46:58 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:46:58 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:46:58 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:47:00.160000+08:00 (in 1.996000 seconds)
+Thu, 20 Apr 2017 14:47:00 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:47:00 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:47:00 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:47:00 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:47:02.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:47:01 transport.py[line:1561] INFO Authentication (password) successful!
+Thu, 20 Apr 2017 14:47:01 transport.py[line:1561] DEBUG EOF in transport thread
+Thu, 20 Apr 2017 14:47:01 transport.py[line:1561] DEBUG starting thread (client mode): 0x472af28L
+Thu, 20 Apr 2017 14:47:01 transport.py[line:1561] DEBUG Local version/idstring: SSH-2.0-paramiko_2.0.1
+Thu, 20 Apr 2017 14:47:01 transport.py[line:1561] DEBUG Remote version/idstring: SSH-2.0-OpenSSH_5.3
+Thu, 20 Apr 2017 14:47:01 transport.py[line:1561] INFO Connected (version 2.0, client OpenSSH_5.3)
+Thu, 20 Apr 2017 14:47:01 transport.py[line:1561] DEBUG kex algos:[u'diffie-hellman-group-exchange-sha256', u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group14-sha1', u'diffie-hellman-group1-sha1'] server key:[u'ssh-rsa', u'ssh-dss'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] client mac:[u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] server mac:[u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
+Thu, 20 Apr 2017 14:47:01 transport.py[line:1561] DEBUG Kex agreed: diffie-hellman-group1-sha1
+Thu, 20 Apr 2017 14:47:01 transport.py[line:1561] DEBUG Cipher agreed: aes128-ctr
+Thu, 20 Apr 2017 14:47:01 transport.py[line:1561] DEBUG MAC agreed: hmac-sha2-256
+Thu, 20 Apr 2017 14:47:01 transport.py[line:1561] DEBUG Compression agreed: none
+Thu, 20 Apr 2017 14:47:01 transport.py[line:1561] DEBUG kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
+Thu, 20 Apr 2017 14:47:01 transport.py[line:1561] DEBUG Switch to new keys ...
+Thu, 20 Apr 2017 14:47:01 transport.py[line:1561] DEBUG Adding ssh-rsa host key for 10.200.8.106: 6fc021533e922ce067955cc5503d393a
+Thu, 20 Apr 2017 14:47:01 transport.py[line:1561] DEBUG userauth is OK
+Thu, 20 Apr 2017 14:47:01 transport.py[line:1561] INFO Authentication (password) successful!
+Thu, 20 Apr 2017 14:47:01 transport.py[line:1561] DEBUG EOF in transport thread
+Thu, 20 Apr 2017 14:47:02 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:47:02 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:47:02 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:47:02 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:47:04.160000+08:00 (in 2.000000 seconds)
+Thu, 20 Apr 2017 14:47:04 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:47:04 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:47:04 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:47:04 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:47:06.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:47:06 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:47:06 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:47:06 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:47:06 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:47:08.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:47:08 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:47:08 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:47:08 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:47:08 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:47:10.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:47:10 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:47:10 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:47:10 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:47:10 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:47:12.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:47:12 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:47:12 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:47:12 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:47:12 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:47:14.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:47:14 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:47:14 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:47:14 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:47:14 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:47:16.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:47:16 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:47:16 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:47:16 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:47:16 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:47:18.160000+08:00 (in 2.000000 seconds)
+Thu, 20 Apr 2017 14:47:18 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:47:18 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:47:18 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:47:18 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:47:20.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:47:20 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:47:20 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:47:20 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:47:20 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:47:22.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:47:22 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:47:22 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:47:22 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:47:22 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:47:24.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:47:22 base.py[line:135] INFO Job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:47:24 CST)" executed successfully
+Thu, 20 Apr 2017 14:47:24 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:47:24 base.py[line:123] INFO Running job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:47:26 CST)" (scheduled at 2017-04-20 14:47:24.160000+08:00)
+Thu, 20 Apr 2017 14:47:24 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:47:26.160000+08:00 (in 1.998000 seconds)
+Thu, 20 Apr 2017 14:47:24 CollectSched.py[line:19] INFO connect to database
+Thu, 20 Apr 2017 14:47:24 CollectSched.py[line:28] INFO connection of database closed complete!
+Thu, 20 Apr 2017 14:47:24 transport.py[line:1561] DEBUG starting thread (client mode): 0x34b7518L
+Thu, 20 Apr 2017 14:47:24 transport.py[line:1561] DEBUG Local version/idstring: SSH-2.0-paramiko_2.0.1
+Thu, 20 Apr 2017 14:47:24 transport.py[line:1561] DEBUG Remote version/idstring: SSH-2.0-OpenSSH_5.3
+Thu, 20 Apr 2017 14:47:24 transport.py[line:1561] INFO Connected (version 2.0, client OpenSSH_5.3)
+Thu, 20 Apr 2017 14:47:24 transport.py[line:1561] DEBUG kex algos:[u'diffie-hellman-group-exchange-sha256', u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group14-sha1', u'diffie-hellman-group1-sha1'] server key:[u'ssh-rsa', u'ssh-dss'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] client mac:[u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] server mac:[u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
+Thu, 20 Apr 2017 14:47:24 transport.py[line:1561] DEBUG Kex agreed: diffie-hellman-group1-sha1
+Thu, 20 Apr 2017 14:47:24 transport.py[line:1561] DEBUG Cipher agreed: aes128-ctr
+Thu, 20 Apr 2017 14:47:24 transport.py[line:1561] DEBUG MAC agreed: hmac-sha2-256
+Thu, 20 Apr 2017 14:47:24 transport.py[line:1561] DEBUG Compression agreed: none
+Thu, 20 Apr 2017 14:47:24 transport.py[line:1561] DEBUG kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
+Thu, 20 Apr 2017 14:47:24 transport.py[line:1561] DEBUG Switch to new keys ...
+Thu, 20 Apr 2017 14:47:24 transport.py[line:1561] DEBUG Adding ssh-rsa host key for 10.200.8.106: 6fc021533e922ce067955cc5503d393a
+Thu, 20 Apr 2017 14:47:24 transport.py[line:1561] DEBUG userauth is OK
+Thu, 20 Apr 2017 14:47:26 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:47:26 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:47:26 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:47:26 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:47:28.160000+08:00 (in 1.996000 seconds)
+Thu, 20 Apr 2017 14:47:28 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:47:28 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:47:28 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:47:28 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:47:30.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:47:29 transport.py[line:1561] INFO Authentication (password) successful!
+Thu, 20 Apr 2017 14:47:29 transport.py[line:1561] DEBUG EOF in transport thread
+Thu, 20 Apr 2017 14:47:29 transport.py[line:1561] DEBUG starting thread (client mode): 0x34b7400L
+Thu, 20 Apr 2017 14:47:29 transport.py[line:1561] DEBUG Local version/idstring: SSH-2.0-paramiko_2.0.1
+Thu, 20 Apr 2017 14:47:29 transport.py[line:1561] DEBUG Remote version/idstring: SSH-2.0-OpenSSH_5.3
+Thu, 20 Apr 2017 14:47:29 transport.py[line:1561] INFO Connected (version 2.0, client OpenSSH_5.3)
+Thu, 20 Apr 2017 14:47:29 transport.py[line:1561] DEBUG kex algos:[u'diffie-hellman-group-exchange-sha256', u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group14-sha1', u'diffie-hellman-group1-sha1'] server key:[u'ssh-rsa', u'ssh-dss'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] client mac:[u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] server mac:[u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
+Thu, 20 Apr 2017 14:47:29 transport.py[line:1561] DEBUG Kex agreed: diffie-hellman-group1-sha1
+Thu, 20 Apr 2017 14:47:29 transport.py[line:1561] DEBUG Cipher agreed: aes128-ctr
+Thu, 20 Apr 2017 14:47:29 transport.py[line:1561] DEBUG MAC agreed: hmac-sha2-256
+Thu, 20 Apr 2017 14:47:29 transport.py[line:1561] DEBUG Compression agreed: none
+Thu, 20 Apr 2017 14:47:29 transport.py[line:1561] DEBUG kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
+Thu, 20 Apr 2017 14:47:29 transport.py[line:1561] DEBUG Switch to new keys ...
+Thu, 20 Apr 2017 14:47:29 transport.py[line:1561] DEBUG Adding ssh-rsa host key for 10.200.8.106: 6fc021533e922ce067955cc5503d393a
+Thu, 20 Apr 2017 14:47:29 transport.py[line:1561] DEBUG userauth is OK
+Thu, 20 Apr 2017 14:47:30 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:47:30 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:47:30 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:47:30 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:47:32.160000+08:00 (in 2.000000 seconds)
+Thu, 20 Apr 2017 14:47:32 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:47:32 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:47:32 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:47:32 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:47:34.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:47:34 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:47:34 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:47:34 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:47:34 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:47:36.160000+08:00 (in 2.000000 seconds)
+Thu, 20 Apr 2017 14:47:36 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:47:36 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:47:36 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:47:36 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:47:38.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:47:38 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:47:38 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:47:38 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:47:38 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:47:40.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:47:39 transport.py[line:1561] INFO Authentication (password) successful!
+Thu, 20 Apr 2017 14:47:39 transport.py[line:1561] DEBUG EOF in transport thread
+Thu, 20 Apr 2017 14:47:40 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:47:40 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:47:40 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:47:40 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:47:42.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:47:42 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:47:42 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:47:42 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:47:42 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:47:44.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:47:44 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:47:44 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:47:44 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:47:44 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:47:46.160000+08:00 (in 2.000000 seconds)
+Thu, 20 Apr 2017 14:47:46 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:47:46 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:47:46 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:47:46 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:47:48.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:47:48 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:47:48 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:47:48 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:47:48 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:47:50.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:47:50 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:47:50 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:47:50 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:47:50 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:47:52.160000+08:00 (in 2.000000 seconds)
+Thu, 20 Apr 2017 14:47:52 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:47:52 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:47:52 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:47:52 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:47:54.160000+08:00 (in 1.995000 seconds)
+Thu, 20 Apr 2017 14:47:54 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:47:54 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:47:54 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:47:54 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:47:56.160000+08:00 (in 1.997000 seconds)
+Thu, 20 Apr 2017 14:47:56 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:47:56 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:47:56 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:47:56 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:47:58.160000+08:00 (in 2.000000 seconds)
+Thu, 20 Apr 2017 14:47:58 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:47:58 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:47:58 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:47:58 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:48:00.160000+08:00 (in 2.000000 seconds)
+Thu, 20 Apr 2017 14:48:00 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:48:00 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:48:00 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:48:00 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:48:02.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:48:00 base.py[line:135] INFO Job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:48:02 CST)" executed successfully
+Thu, 20 Apr 2017 14:48:02 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:48:02 base.py[line:123] INFO Running job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:48:02 CST)" (scheduled at 2017-04-20 14:48:02.160000+08:00)
+Thu, 20 Apr 2017 14:48:02 CollectSched.py[line:19] INFO connect to database
+Thu, 20 Apr 2017 14:48:02 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:48:04.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:48:02 CollectSched.py[line:28] INFO connection of database closed complete!
+Thu, 20 Apr 2017 14:48:02 transport.py[line:1561] DEBUG starting thread (client mode): 0x34b7c18L
+Thu, 20 Apr 2017 14:48:02 transport.py[line:1561] DEBUG Local version/idstring: SSH-2.0-paramiko_2.0.1
+Thu, 20 Apr 2017 14:48:02 transport.py[line:1561] DEBUG Remote version/idstring: SSH-2.0-OpenSSH_5.3
+Thu, 20 Apr 2017 14:48:02 transport.py[line:1561] INFO Connected (version 2.0, client OpenSSH_5.3)
+Thu, 20 Apr 2017 14:48:02 transport.py[line:1561] DEBUG kex algos:[u'diffie-hellman-group-exchange-sha256', u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group14-sha1', u'diffie-hellman-group1-sha1'] server key:[u'ssh-rsa', u'ssh-dss'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] client mac:[u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] server mac:[u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
+Thu, 20 Apr 2017 14:48:02 transport.py[line:1561] DEBUG Kex agreed: diffie-hellman-group1-sha1
+Thu, 20 Apr 2017 14:48:02 transport.py[line:1561] DEBUG Cipher agreed: aes128-ctr
+Thu, 20 Apr 2017 14:48:02 transport.py[line:1561] DEBUG MAC agreed: hmac-sha2-256
+Thu, 20 Apr 2017 14:48:02 transport.py[line:1561] DEBUG Compression agreed: none
+Thu, 20 Apr 2017 14:48:02 transport.py[line:1561] DEBUG kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
+Thu, 20 Apr 2017 14:48:02 transport.py[line:1561] DEBUG Switch to new keys ...
+Thu, 20 Apr 2017 14:48:02 transport.py[line:1561] DEBUG Adding ssh-rsa host key for 10.200.8.106: 6fc021533e922ce067955cc5503d393a
+Thu, 20 Apr 2017 14:48:02 transport.py[line:1561] DEBUG userauth is OK
+Thu, 20 Apr 2017 14:48:04 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:48:04 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:48:04 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:48:04 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:48:06.160000+08:00 (in 1.997000 seconds)
+Thu, 20 Apr 2017 14:48:06 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:48:06 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:48:06 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:48:06 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:48:08.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:48:07 transport.py[line:1561] INFO Authentication (password) successful!
+Thu, 20 Apr 2017 14:48:07 transport.py[line:1561] DEBUG EOF in transport thread
+Thu, 20 Apr 2017 14:48:07 transport.py[line:1561] DEBUG starting thread (client mode): 0x4808ba8L
+Thu, 20 Apr 2017 14:48:07 transport.py[line:1561] DEBUG Local version/idstring: SSH-2.0-paramiko_2.0.1
+Thu, 20 Apr 2017 14:48:07 transport.py[line:1561] DEBUG Remote version/idstring: SSH-2.0-OpenSSH_5.3
+Thu, 20 Apr 2017 14:48:07 transport.py[line:1561] INFO Connected (version 2.0, client OpenSSH_5.3)
+Thu, 20 Apr 2017 14:48:07 transport.py[line:1561] DEBUG kex algos:[u'diffie-hellman-group-exchange-sha256', u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group14-sha1', u'diffie-hellman-group1-sha1'] server key:[u'ssh-rsa', u'ssh-dss'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] client mac:[u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] server mac:[u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
+Thu, 20 Apr 2017 14:48:07 transport.py[line:1561] DEBUG Kex agreed: diffie-hellman-group1-sha1
+Thu, 20 Apr 2017 14:48:07 transport.py[line:1561] DEBUG Cipher agreed: aes128-ctr
+Thu, 20 Apr 2017 14:48:07 transport.py[line:1561] DEBUG MAC agreed: hmac-sha2-256
+Thu, 20 Apr 2017 14:48:07 transport.py[line:1561] DEBUG Compression agreed: none
+Thu, 20 Apr 2017 14:48:07 transport.py[line:1561] DEBUG kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
+Thu, 20 Apr 2017 14:48:07 transport.py[line:1561] DEBUG Switch to new keys ...
+Thu, 20 Apr 2017 14:48:07 transport.py[line:1561] DEBUG Adding ssh-rsa host key for 10.200.8.106: 6fc021533e922ce067955cc5503d393a
+Thu, 20 Apr 2017 14:48:07 transport.py[line:1561] DEBUG userauth is OK
+Thu, 20 Apr 2017 14:48:08 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:48:08 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:48:08 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:48:08 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:48:10.160000+08:00 (in 2.000000 seconds)
+Thu, 20 Apr 2017 14:48:10 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:48:10 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:48:10 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:48:10 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:48:12.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:48:12 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:48:12 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:48:12 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:48:12 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:48:14.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:48:14 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:48:14 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:48:14 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:48:14 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:48:16.160000+08:00 (in 2.000000 seconds)
+Thu, 20 Apr 2017 14:48:16 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:48:16 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:48:16 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:48:16 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:48:18.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:48:17 transport.py[line:1561] INFO Authentication (password) successful!
+Thu, 20 Apr 2017 14:48:17 transport.py[line:1561] DEBUG EOF in transport thread
+Thu, 20 Apr 2017 14:48:18 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:48:18 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:48:18 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:48:18 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:48:20.160000+08:00 (in 2.000000 seconds)
+Thu, 20 Apr 2017 14:48:20 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:48:20 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:48:20 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:48:20 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:48:22.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:48:22 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:48:22 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:48:22 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:48:22 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:48:24.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:48:24 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:48:24 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:48:24 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:48:24 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:48:26.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:48:26 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:48:26 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:48:26 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:48:26 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:48:28.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:48:28 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:48:28 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:48:28 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:48:28 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:48:30.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:48:30 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:48:30 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:48:30 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:48:30 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:48:32.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:48:32 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:48:32 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:48:32 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:48:32 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:48:34.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:48:34 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:48:34 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:48:34 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:48:34 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:48:36.160000+08:00 (in 2.000000 seconds)
+Thu, 20 Apr 2017 14:48:36 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:48:36 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:48:36 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:48:36 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:48:38.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:48:38 base.py[line:924] DEBUG Looking for jobs to run
+Thu, 20 Apr 2017 14:48:38 base.py[line:962] WARNING Execution of job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:48:38 CST)" skipped: maximum number of running instances reached (1)
+Thu, 20 Apr 2017 14:48:38 base.py[line:1004] DEBUG Next wakeup is due at 2017-04-20 14:48:40.160000+08:00 (in 1.999000 seconds)
+Thu, 20 Apr 2017 14:48:38 base.py[line:135] INFO Job "GetQueueId (trigger: interval[0:00:02], next run at: 2017-04-20 14:48:40 CST)" executed successfully
