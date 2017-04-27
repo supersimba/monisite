@@ -47,23 +47,6 @@ def GetQueueId():
 
 
 
-            # sshcli=paramiko.SSHClient()
-            # sshcli.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-            # try:
-            #     sshcli.connect(srcip,22,"oracle","oracle")
-            #     stdin,stdout,stderr=sshcli.exec_command("ls -d "+srcpath)
-            #     stdoutlist=stdout.readlines()
-            #     stderrlist=stderr.readlines()
-            #     if stdoutlist:
-            #         print stdoutlist
-            #     if stderrlist:
-            #         print srcpath+' is not existed!'
-            # except Exception,e:
-            #     print srcip+' can not connect...........'
-            # finally:
-            #     sshcli.close()
-
-
 
 schd=BlockingScheduler()
 schd.add_job(GetQueueId,'interval',seconds=2)
