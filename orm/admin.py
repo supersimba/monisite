@@ -5,7 +5,7 @@ from orm.models import *
 
 
 class RepQueueAdmin(admin.ModelAdmin):
-    list_display = ['describe','src_ip','src_path','tgt_ip','tgt_path', 'add_user','script_path','add_time']
+    list_display = ['describe','src_ip','src_path','tgt_ip','tgt_path', 'add_user','src_script_path','tgt_script_path','add_time']
     # list_editable = ['describe','src_ip','src_path','tgt_ip','tgt_path', 'add_time']
     def save_model(self, request, obj, form, change):
         print '==================================='

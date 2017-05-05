@@ -20,7 +20,7 @@ def GetSrcQueueConfig():
         logging.info('connect to database')
         db=MySQLdb.connect(host='10.200.8.106',port=3306,user='root',passwd="simba2016",db='monidb')
         c=db.cursor()
-        c.execute("select src_ip,src_path,src_ssh_user,src_ssh_pwd,script_path,rid from rep_queue")
+        c.execute("select src_ip,src_path,src_ssh_user,src_ssh_pwd,src_path_status,rid from rep_queue")
         rows=c.fetchall()
         # print rows
     except Exception,e:
@@ -88,6 +88,7 @@ def CollectSrcMoniInfo():
                 finally:
                     cli.close()
             else:
+                # 检查未通过,不进行数据采集
                 try:
                     conn = MySQLdb.connect(host='10.200.8.106', port=3306, user='root', passwd="simba2016", db='monidb')
                     c = conn.cursor()

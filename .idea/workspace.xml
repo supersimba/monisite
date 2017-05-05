@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1dff36d5-847c-4126-bacc-c27f1be046da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/collectsrcschd.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/orm/migrations/0001_initial.py" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/collecttgtschd.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/CollectSched.py" afterPath="$PROJECT_DIR$/libs/CollectSched.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/checkconfig.py" afterPath="$PROJECT_DIR$/libs/checkconfig.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/collectschd.log" afterPath="$PROJECT_DIR$/libs/collectschd.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/collectsrcschd.py" afterPath="$PROJECT_DIR$/libs/collectsrcschd.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/orm/admin.py" afterPath="$PROJECT_DIR$/orm/admin.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/orm/models.py" afterPath="$PROJECT_DIR$/orm/models.py" />
     </list>
@@ -36,8 +34,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/orm/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="59" column="60" selection-start-line="59" selection-start-column="60" selection-end-line="59" selection-end-column="60" />
+            <state relative-caret-position="40">
+              <caret line="70" column="18" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
               <folding>
                 <element signature="e#15#43#0" expanded="true" />
               </folding>
@@ -45,16 +43,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="collectsrcschd.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/libs/collectsrcschd.py">
+      <file leaf-file-name="collecttgtschd.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/libs/collecttgtschd.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="89" column="17" selection-start-line="89" selection-start-column="17" selection-end-line="89" selection-end-column="17" />
+            <state relative-caret-position="95">
+              <caret line="58" column="75" selection-start-line="58" selection-start-column="75" selection-end-line="58" selection-end-column="75" />
               <folding>
-                <element signature="e#27#72#0" expanded="true" />
-                <marker date="1493263541005" expanded="true" signature="649:727" ph="select src_i... rep_queue" />
-                <marker date="1493263541005" expanded="true" signature="2786:2983" ph="insert into src_moni_info... " />
-                <marker date="1493263541005" expanded="true" signature="3927:4044" ph="insert into src_moni_info... " />
+                <element signature="e#28#73#0" expanded="true" />
+                <marker date="1493970103489" expanded="true" signature="650:732" ph="select tgt_i... rep_queue" />
+                <marker date="1493970103489" expanded="true" signature="2043:2160" ph="insert into tgt_moni_info... " />
               </folding>
             </state>
           </provider>
@@ -64,7 +61,7 @@
         <entry file="file://$PROJECT_DIR$/orm/admin.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="7" column="95" selection-start-line="7" selection-start-column="95" selection-end-line="7" selection-end-column="95" />
+              <caret line="7" column="105" selection-start-line="7" selection-start-column="105" selection-end-line="7" selection-end-column="105" />
               <folding>
                 <element signature="e#14#46#0" expanded="true" />
               </folding>
@@ -94,13 +91,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="checkconfig.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libs/checkconfig.py">
+      <file leaf-file-name="collectsrcschd.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libs/collectsrcschd.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="29" column="19" selection-start-line="11" selection-start-column="4" selection-end-line="29" selection-end-column="19" />
+            <state relative-caret-position="120">
+              <caret line="102" column="32" selection-start-line="91" selection-start-column="16" selection-end-line="102" selection-end-column="32" />
               <folding>
-                <element signature="e#39#49#0" expanded="true" />
+                <element signature="e#27#72#0" expanded="true" />
+                <marker date="1493969936989" expanded="true" signature="649:731" ph="select src_i... rep_queue" />
+                <marker date="1493969936989" expanded="true" signature="2790:2987" ph="insert into src_moni_info... " />
+                <marker date="1493969936989" expanded="true" signature="3963:3975" ph="insert into tgt_moni_info... " />
               </folding>
             </state>
           </provider>
@@ -126,11 +126,12 @@
         <option value="$PROJECT_DIR$/libs/schd.py" />
         <option value="$PROJECT_DIR$/libs/CollectSched.py" />
         <option value="$PROJECT_DIR$/libs/collectsched.py" />
-        <option value="$PROJECT_DIR$/orm/admin.py" />
         <option value="$PROJECT_DIR$/libs/checkconfig.py" />
         <option value="$PROJECT_DIR$/dbhelp/dbmysql/dboper.py" />
+        <option value="$PROJECT_DIR$/orm/admin.py" />
         <option value="$PROJECT_DIR$/orm/models.py" />
         <option value="$PROJECT_DIR$/libs/collectsrcschd.py" />
+        <option value="$PROJECT_DIR$/libs/collecttgtschd.py" />
       </list>
     </option>
   </component>
@@ -141,8 +142,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="556" />
-    <option name="y" value="40" />
+    <option name="x" value="6" />
+    <option name="y" value="3" />
     <option name="width" value="1022" />
     <option name="height" value="722" />
   </component>
@@ -496,28 +497,28 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="556" y="40" width="1022" height="722" extended-state="0" />
-    <editor active="false" />
+    <frame x="6" y="3" width="1022" height="722" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15123457" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15123457" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="17" y="566" width="1558" height="245" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39966834" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="17" y="566" width="1558" height="245" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="manage.py@monisite" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -533,21 +534,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/orm/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="7" column="95" selection-start-line="7" selection-start-column="95" selection-end-line="7" selection-end-column="95" />
-          <folding>
-            <element signature="e#14#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/monisite/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -571,7 +562,7 @@
         <state relative-caret-position="540">
           <caret line="29" column="19" selection-start-line="11" selection-start-column="4" selection-end-line="29" selection-end-column="19" />
           <folding>
-            <element signature="e#39#49#0" expanded="true" />
+            <element signature="e#39#49#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -603,9 +594,9 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#27#72#0" expanded="true" />
-            <marker date="1493263541005" expanded="true" signature="649:727" ph="select src_i... rep_queue" />
-            <marker date="1493263541005" expanded="true" signature="2786:2983" ph="insert into src_moni_info... " />
-            <marker date="1493263541005" expanded="true" signature="3927:4044" ph="insert into src_moni_info... " />
+            <marker date="1493969936989" expanded="true" signature="649:731" ph="select src_i... rep_queue" />
+            <marker date="1493969936989" expanded="true" signature="2790:2987" ph="insert into src_moni_info... " />
+            <marker date="1493969936989" expanded="true" signature="3963:3975" ph="insert into tgt_moni_info... " />
           </folding>
         </state>
       </provider>
@@ -651,7 +642,7 @@
         <state relative-caret-position="540">
           <caret line="29" column="19" selection-start-line="11" selection-start-column="4" selection-end-line="29" selection-end-column="19" />
           <folding>
-            <element signature="e#39#49#0" expanded="true" />
+            <element signature="e#39#49#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -682,7 +673,7 @@
         <state relative-caret-position="340">
           <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
           <folding>
-            <element signature="e#39#49#0" expanded="true" />
+            <element signature="e#39#49#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -906,36 +897,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/orm/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="7" column="95" selection-start-line="7" selection-start-column="95" selection-end-line="7" selection-end-column="95" />
-          <folding>
-            <element signature="e#14#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/orm/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="59" column="60" selection-start-line="59" selection-start-column="60" selection-end-line="59" selection-end-column="60" />
-          <folding>
-            <element signature="e#15#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/checkconfig.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="29" column="19" selection-start-line="11" selection-start-column="4" selection-end-line="29" selection-end-column="19" />
-          <folding>
-            <element signature="e#39#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dbhelp/dbmysql/dboper.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -952,16 +913,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/monisite/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="70" column="22" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="22" />
-          <folding>
-            <element signature="e#14#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libs/collectsched.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="982">
@@ -973,15 +924,67 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/orm/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="7" column="105" selection-start-line="7" selection-start-column="105" selection-end-line="7" selection-end-column="105" />
+          <folding>
+            <element signature="e#14#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/checkconfig.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+          <folding>
+            <element signature="e#39#49#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monisite/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="70" column="22" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="22" />
+          <folding>
+            <element signature="e#14#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/orm/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="70" column="18" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
+          <folding>
+            <element signature="e#15#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/libs/collectsrcschd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="89" column="17" selection-start-line="89" selection-start-column="17" selection-end-line="89" selection-end-column="17" />
+        <state relative-caret-position="120">
+          <caret line="102" column="32" selection-start-line="91" selection-start-column="16" selection-end-line="102" selection-end-column="32" />
           <folding>
             <element signature="e#27#72#0" expanded="true" />
-            <marker date="1493263541005" expanded="true" signature="649:727" ph="select src_i... rep_queue" />
-            <marker date="1493263541005" expanded="true" signature="2786:2983" ph="insert into src_moni_info... " />
-            <marker date="1493263541005" expanded="true" signature="3927:4044" ph="insert into src_moni_info... " />
+            <marker date="1493969936989" expanded="true" signature="649:731" ph="select src_i... rep_queue" />
+            <marker date="1493969936989" expanded="true" signature="2790:2987" ph="insert into src_moni_info... " />
+            <marker date="1493969936989" expanded="true" signature="3963:3975" ph="insert into tgt_moni_info... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/collecttgtschd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="58" column="75" selection-start-line="58" selection-start-column="75" selection-end-line="58" selection-end-column="75" />
+          <folding>
+            <element signature="e#28#73#0" expanded="true" />
+            <marker date="1493970103489" expanded="true" signature="650:732" ph="select tgt_i... rep_queue" />
+            <marker date="1493970103489" expanded="true" signature="2043:2160" ph="insert into tgt_moni_info... " />
           </folding>
         </state>
       </provider>
