@@ -71,7 +71,7 @@ DATABASES = {
         'NAME':"monidb",
         'USER':'root',
         'PASSWORD':"simba2016",
-        'HOST':"10.200.8.106"
+        'HOST':"127.0.0.1"
      }
 }
 
