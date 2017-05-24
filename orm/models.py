@@ -72,7 +72,8 @@ class tgt_moni_info(models.Model):
     loader_rate=models.CharField(verbose_name=u'加载进度信息',null=True,max_length=200)
     loader_time=models.CharField(verbose_name=u'加载时间信息',null=True,max_length=200)
     loader_err=models.CharField(verbose_name=u'加载报错信息',null=True,max_length=200)
-    queue_id = models.IntegerField(verbose_name=u'队列ID信息')
+    # queue_id = models.IntegerField(verbose_name=u'队列ID信息')
+    queue_id=models.ForeignKey(rep_queue,db_column='queue_id',verbose_name=u'队列ID信息')
     add_time = models.DateTimeField(verbose_name=u'监控信息添加时间', default=datetime.datetime.now)
     class Meta:
         db_table='tgt_moni_info'
@@ -80,7 +81,15 @@ class tgt_moni_info(models.Model):
         verbose_name_plural=verbose_name
 
 
+class person(models.Model):
+    pid=models.AutoField(primary_key=True)
+    pname=models.CharField(max_length=25)
 
+class p_mes(models.Model):
+    pid=models.AutoField(primary_key=True)
+    paddr=models.CharField(max_length=15)
+    ptel=models.CharField(max_length=11)
+    person=models.ForeignKey(person,db_column='per_id')
 
 
 

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="/static/js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="/static/js/ormmoni.js"></script>
+        <script type="text/javascript" src="/static/js/jquery-json-3.2.1.js"></script>
+        <script type="text/javascript" src="/static/js/getrepinfo.js"></script>
+		<link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="/static/css/rmappindex.css" />
+
+	</head>
+	<body>
+		<!--header block-->
+		<nav class="navbar navbar-default">
+			<div class="navbar-brand">
+				同步监控平台v1.0
+			</div>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sider-menu">
+				<span class="sr-only">Toggle navigation</span>
+        		<span class="icon-bar"></span>
+        		<span class="icon-bar"></span>
+        		<span class="icon-bar"></span>
+			</button>
+
+			<div class="navbar-brand navbar-right login-text">
+				C罗，欢迎登陆
+			</div>
+
+		</nav>
+		<!--header block-->
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-2">
+					<!--左边菜单栏-->
+					<!--<div class="collapse" id="bs-example-navbar-collapse-1">1</div>-->
+					<ul class="nav nav-stacked collapse navbar-collapse" id="sider-menu">
+						<li role="presentation" class="active">
+							<a href="#">
+								<span class="glyphicon glyphicon-home" style="margin-right: 15px;"></span>平台首页</a>
+						</li>
+						<li role="presentation">
+							<a href="#"><span class="glyphicon glyphicon-th-list" style="margin-right: 15px;"></span>同步监控</a>
+						</li>
+						<li role="presentation">
+							<a href="#"><span class="glyphicon glyphicon-stats" style="margin-right: 15px;"></span>主机监控</a>
+						</li>
+						<li role="presentation">
+							<a href="#"><span class="glyphicon glyphicon-stats" style="margin-right: 15px;"></span>数据库监控</a>
+						</li>
+						<li role="presentation">
+							<a href="#"><span class="glyphicon glyphicon-user" style="margin-right: 15px;">
+  							</span>账号管理</a>
+						</li>
+						<li role="presentation">
+							<a href="#"><span class="glyphicon glyphicon-minus" style="margin-right: 15px;">
+  							</span>退出登录</a>
+						</li>
+					</ul>
+					<!--左边菜单栏-->
+				</div>
+				<div class="col-md-10 div-content">
+					<!--路径导航-->
+					<div class="col-md-12">
+						<ol class="breadcrumb">
+							<li>
+								<a href="#">平台首页</a>
+							</li>
+							<li>
+								<a href="#">同步监控</a>
+							</li>
+							<!--<li class="active">Data</li>-->
+						</ol>
+					</div>
+					<!--路径导航-->
+
+					<!--同步状态信息列表-->
+					<div class="col-md-12">
+					<!--<!--同步状态信息列表-->
+						<table class="table table-bordered">
+							<thead style="background-color: rgb(0,116,199);color: white;font-family: '微软雅黑';font-weight: 700;">
+								<td></td>
+								<td>同步描述</td>
+								<td>源端IP</td>
+                                <td>S端远程脚本</td>
+								<td>源端状态</td>
+								<td>源端动作</td>
+								<td>备端IP</td>
+                                <td>T端远程脚本</td>
+								<td>备端状态</td>
+								<td>备端动作</td>
+                                <td>采集时间</td>
+								<td>日志</td>
+								<td></td>
+							</thead>
+							<tbody style="font-family: '微软雅黑';font-size: 12px;">
+								<!--行记录-->
+                            {% for l in dblist %}
+                                <tr>
+									<td>
+										<a href="#" class="link-collose"><img src="/static/img/111.png"></a>
+                                        <span class="span-rid" style="display: none">{{ l.rid }}</span>
+                                        <span class="span-src-user" style="display: none">{{ l.src_ssh_user }}</span>
+                                        <span class="span-src-pwd" style="display: none">{{ l.src_ssh_pwd }}</span>
+                                        <span class="span-tgt_user" style="display: none">{{ l.tgt_ssh_user }}</span>
+                                        <span class="span-tgt-pwd" style="display: none">{{ l.tgt_ssh_pwd }}</span>
+									</td>
+									<td>{{ l.describe }}</td>
+									<td>
+										{{ l.src_ip }}:{{ l.src_path }}
+									</td>
+                                    <td>
+                                        {{ l.src_script_path }}
+                                    </td>
+									<td>
+
+									</td>
+									<td>
+
+									</td>
+									<td>
+										{{ l.tgt_ip }}:{{ l.tgt_path }}
+									</td>
+                                    <td>
+                                        {{ l.tgt_script_path }}
+                                    </td>
+									<td></td>
+									<td></td>
+                                    <td></td>
+									<td>
+										<a href="#">查看</a>
+									</td>
+									<td>
+										<a href="#">同步操作</a>
+									</td>
+								</tr>
+								<tr class="td-yc">
+									<td colspan="9">
+										<div>
+											<span style="font-size: 18px;">S</span>：分析进程数2&nbsp;&nbsp;传输进程数2&nbsp;&nbsp;分析进度(22222-11111)&nbsp;&nbsp;传输进度(22222-22220)&nbsp;&nbsp;分析进程报错0&nbsp;&nbsp;传输进程报错11
+										</div>
+										<div>
+											<span style="font-size: 18px;">S</span>：分析进程状态：OK&nbsp;&nbsp;传输进程状态：OK&nbsp;&nbsp;报错：
+										</div>
+										<div>
+											<span style="font-size: 18px;">T</span>：
+                                            VAGENTD-<span id="span-vagnum" class="span-info"></span>&nbsp;|&nbsp;接收进程报错-<span id="span-vagnum-err" class="span-info"></span>&nbsp;|&nbsp;
+                                            装载进程-全量><span id="span-loader-s"  class="span-info"></span>&nbsp;|&nbsp;
+                                            装载进度-<span id="span-loader-rate"  class="span-info"></span>&nbsp;|&nbsp;
+                                            装载报错-<span id="span-loader-err"  class="span-info"></span>&nbsp;|&nbsp;
+                                            装载时间-<span id="span-loader-time"  class="span-info"></span>
+                                            <br/>
+										</div>
+									</td>
+								</tr>
+								<!--END 行记录-->
+                            {% endfor %}
+							</tbody>
+						</table>
+					</div>
+			</div>
+
+			<!--footer-->
+			<div class="row">
+				<div class="col-md-12" style="text-align: center;font-size: 12px;margin-top: 50px;">
+					copyright by ©李丹,信息技术部
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>

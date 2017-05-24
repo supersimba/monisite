@@ -1,0 +1,46 @@
+body{
+	font-family: "微软雅黑";
+	background-color: rgb(238,238,238);
+}
+/*设置header*/
+.navbar-default {
+    background-color: hsl(205, 100%, 39%);
+}
+.navbar-default .navbar-brand {
+    color: white;
+}
+.login-text{
+	font-size: 13px;
+	margin-right: 15px;
+}
+/**/
+
+/*设置sider左菜单*/
+#sider-menu{
+	background-color: rgb(245,245,245);
+	border: 1px solid rgb(204,204,204);
+	font-weight: 700;
+}
+.nav>li>a {
+    color: rgb(98,98,98);
+    text-decoration: none;
+}
+.breadcrumb a {
+    color: rgb(160,160,160);
+    text-decoration: none;
+}
+.panel{
+	font-size: 15px;
+}
+.panel-body{
+	font-weight: 300;
+	font-size: 28px;
+	color: rgb(160,160,160);
+}
+.div-content{
+	background-color: white;
+}
+.div-fuwuqi{
+	font-size: 15px;
+	color: rgb(160,160,160);
+}

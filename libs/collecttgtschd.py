@@ -50,6 +50,7 @@ def CollectTgtMoniInfo():
             print "check scritpath :",scriptpath
             print "list1 :"+str(check_list[0])+"list2 :"+str(check_list[1])+"list3 :"+str(check_list[2])
             if check_list[0] == 1 and check_list[1] == 1 and check_list[2] == 1:
+                #配置(ip ssh 脚本目录)检查成功
                 print 'begin to exec remote shell[target]',tgtip
                 cli = paramiko.SSHClient()
                 cli.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -59,7 +60,7 @@ def CollectTgtMoniInfo():
                     stdin, stdout, stderr = cli.exec_command("sh "+scriptpath+"/tgt_collect.sh "+tgtpath)
                     out = stdout.readlines()
                     err=stderr.readlines()
-                    print 'len(out)',len(out)
+                    print '监控脚本输出信息:',len(out)
                     print out
                     if out:
                         try:
@@ -82,20 +83,6 @@ def CollectTgtMoniInfo():
                     print e
                 finally:
                     cli.close()
-                # try:
-                #     conn = MySQLdb.connect(host='127.0.0.1', port=3306, user='root', passwd="simba2016", db='monidb')
-                #     c = conn.cursor()
-                #     c.execute(
-                #         "insert into tgt_moni_info(tgt_ssh_status,tgt_path_status,script_path_status,sync_status,active,collect_cnt,collect_err,loader_s_cnt,loader_r_cnt,loader_s_p_cnt,loader_r_p_cnt,loader_rate,loader_time,loader_err,queue_id,add_time) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
-                #         [ssh_status, path_status, script_status, r[5],
-                #          datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")])
-                #     conn.commit()
-                # except MySQLdb,e:
-                #     print e
-                #     conn.rollback()
-                # finally:
-                #     c.close()
-                #     conn.close()
             else:
                 #目录检查未通过,不进行数据采集
                 try:
@@ -113,5 +100,5 @@ def CollectTgtMoniInfo():
 
 
 schd=BlockingScheduler()
-schd.add_job(CollectTgtMoniInfo,'interval',seconds=3)
+schd.add_job(CollectTgtMoniInfo,'interval',seconds=1)
 schd.start()
