@@ -18,16 +18,15 @@ def GetSrcQueueConfig():
     rows=()
     try:
         logging.info('connect to database')
-        db=MySQLdb.connect(host='10.200.8.106',port=3306,user='root',passwd="simba2016",db='monidb')
+        db=MySQLdb.connect(host='127.0.0.1',port=3306,user='root',passwd="simba2016",db='monidb')
         c=db.cursor()
-        c.execute("select src_ip,src_path,src_ssh_user,src_ssh_pwd,src_path_status,rid from rep_queue")
+        c.execute("select src_ip,src_path,src_ssh_user,src_ssh_pwd,src_script_path,rid from rep_queue")
         rows=c.fetchall()
         # print rows
     except Exception,e:
         logging.error(e)
     finally:
         db.close()
-        # print 'aaa:'
         return rows
         logging.info('connection of database closed complete!')
 
@@ -40,7 +39,7 @@ def CollectSrcMoniInfo():
     # print args
     if len(args)>0:
         for r in args:
-            print r
+            #print r
             srcip = r[0]
             srcpath = r[1]
             sshuser = r[2]
@@ -65,17 +64,16 @@ def CollectSrcMoniInfo():
                     print "sh "+scriptpath+"/src_collect.sh"
                     stdin, stdout, stderr = cli.exec_command("sh "+scriptpath+"/src_collect.sh "+srcpath)
                     out = stdout.readlines()
+                    print len(out[7])
+                    print out
                     err=stderr.readlines()
                     if out:
                         try:
-                            conn = MySQLdb.connect(host='10.200.8.106', port=3306, user='root', passwd="simba2016",
+                            conn = MySQLdb.connect(host='127.0.0.1', port=3306, user='root', passwd="simba2016",
                                                    db='monidb')
                             c = conn.cursor()
                             c.execute(
-                                "insert into src_moni_info(src_ssh_status,src_path_status,dbps_cnt,capture_cnt,sender_cnt,capture_err,sender_err,script_path_status,active,queue_id,add_time) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
-                                [ssh_status, path_status, out[0].strip("\n"),out[1].strip("\n"),out[2].strip("\n"),out[3].strip("\n"),
-                                out[4].strip("\n"),script_status,out[5].strip("\n"),r[5],
-                                 datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")])
+                                "insert into src_moni_info(src_ssh_status,src_path_status,script_path_status,dbps_cnt,capture_cnt,sender_cnt,sync_status,active,capture_err,sender_err,capture_rate,queue_id,add_time) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",[ssh_status, path_status,script_status, out[0].strip("\n"),out[1].strip("\n"),out[2].strip("\n"),out[3].strip("\n"),out[4].strip("\n"),out[5].strip("\n"),out[6].strip("\n"),out[7].strip("\n"),r[5],datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")])
                             conn.commit()
                         except MySQLdb, e:
                             print e
@@ -90,7 +88,7 @@ def CollectSrcMoniInfo():
             else:
                 # 检查未通过,不进行数据采集
                 try:
-                    conn = MySQLdb.connect(host='10.200.8.106', port=3306, user='root', passwd="simba2016", db='monidb')
+                    conn = MySQLdb.connect(host='127.0.0.1', port=3306, user='root', passwd="simba2016", db='monidb')
                     c = conn.cursor()
                     c.execute("insert into src_moni_info(src_ssh_status,src_path_status,script_path_status,queue_id,add_time) values(%s,%s,%s,%s,%s)",
                           [ssh_status,path_status,script_status,r[5],datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")])

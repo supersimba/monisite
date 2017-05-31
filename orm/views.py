@@ -30,7 +30,7 @@ def ormmoni(req):
     return render_to_response('ormmoni.html', {'dblist': dbobj})
 
 def display_target_info(req):
-    rid=req.POST["rid"];
+    rid=req.POST["rid"]
     if req.method=='POST':
         infos=tgt_moni_info.objects.filter(queue_id=rid)
         if infos:
@@ -51,6 +51,30 @@ def display_target_info(req):
                 'loader_rate':o.loader_rate,
                 'loader_time':o.loader_time,
                 'loader_err':o.loader_err,
+                'add_time':o.add_time
+            }
+            info_json=json.dumps(infodic,cls=CJsonEncoder)
+        return HttpResponse(info_json)
+
+
+def display_source_info(req):
+    rid = req.POST["rid"]
+    if req.method=='POST':
+        infos=src_moni_info.objects.filter(queue_id=rid)
+        if infos:
+            #print infos.order_by('-tid')[0].tid
+            o=infos.order_by('-sid')[0]
+            infodic={
+                'ssh_status':o.src_ssh_status,
+                'path_status':o.src_path_status,
+                'script_status':o.script_path_status,
+                'sync_status':o.sync_status,
+                'active':o.active,
+                'dbps_cnt':o.dbps_cnt,
+                'capture_cnt':o.capture_cnt,
+                'sender_cnt':o.sender_cnt,
+                'capture_err':o.capture_err,
+                'sender_err':o.sender_err,
                 'add_time':o.add_time
             }
             info_json=json.dumps(infodic,cls=CJsonEncoder)
