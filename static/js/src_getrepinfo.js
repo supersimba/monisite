@@ -55,35 +55,46 @@ function getSourceInfo(queue_id,trobj,i,trobj_plus) {
                 beforeSend:function () {
                     console.log("begin to get info from src_moni_info");
                 },
-                success:function (callback) {
-                    if(callback["ssh_status"]==1 && callback["path_status"]==1 && callback["script_status"]==1)
+                success:function (callback,status,xhr) {
+                    if(callback["record_flag"]=='-1')
                     {
-                        //console.log(typeof callback["add_time"]);
-                        trobj.children().eq(4).text(setSrcSyncStatus(callback["sync_status"]));
-                        trobj.children().eq(5).text(setSrcSyncActive(callback["active"]));
-                        trobj.children().eq(6).text(callback["add_time"]);
-                        trobj_plus.children().eq(0).children().eq(0).children('#span-dbps-num').text(callback['dbps_cnt']);
-                        trobj_plus.children().eq(0).children().eq(0).children('#span-vag-num').text(callback['capture_cnt']);
-                        trobj_plus.children().eq(0).children().eq(0).children('#span-sender-num').text(callback['sender_cnt']);
-                        trobj_plus.children().eq(0).children().eq(0).children('#span-vag-err').text(callback['capture_err']);
-                        trobj_plus.children().eq(0).children().eq(0).children('#span-sender-err').text(callback['sender_err']);
-                        // trobj_plus.children().eq(0).children().eq(2).children('#span-loader-time').text(callback['loader_time']);
+                        trobj.css({'background':'#FFFFCC','color':'black'});
                     }
-                    // else
-                    // {
-                    //     if(callback["ssh_status"]==-1 || callback["path_status"]==-1)
-                    //     {
-                    //         trobj.children().eq(6).css({'color':'white','background':'red','font-weight':'600'});
-                    //     }
-                    //     if(callback["script_status"]==-1)
-                    //     {
-                    //         trobj.children().eq(7).css({'color':'white','background':'red','font-weight':'600'});
-                    //     }
-                    // }
+                    else
+                    {
+                        trobj.css({'background':'white','color':'black'});
+                        if(callback["ssh_status"]==1 && callback["path_status"]==1 && callback["script_status"]==1)
+                        {
+                            trobj.children().eq(2).css({'color':'black','background':'white'});
+                            trobj.children().eq(4).text(setSrcSyncStatus(callback["sync_status"]));
+                            trobj.children().eq(5).text(setSrcSyncActive(callback["active"]));
+                            trobj.children().eq(6).text(callback["add_time"]);
+                            trobj_plus.children().eq(0).children().eq(0).children('#span-dbps-num').text(callback['dbps_cnt']);
+                            trobj_plus.children().eq(0).children().eq(0).children('#span-vag-num').text(callback['capture_cnt']);
+                            trobj_plus.children().eq(0).children().eq(0).children('#span-sender-num').text(callback['sender_cnt']);
+                            trobj_plus.children().eq(0).children().eq(0).children('#span-vag-err').text(callback['capture_err']);
+                            trobj_plus.children().eq(0).children().eq(0).children('#span-sender-err').text(callback['sender_err']);
+                        // trobj_plus.children().eq(0).children().eq(2).children('#span-loader-time').text(callback['loader_time']);
+                        }
+                        else
+                        {
+                            if(callback["ssh_status"]==-1 || callback["path_status"]==-1)
+                            {
+                                trobj.children().eq(2).css({'color':'white','background':'red','font-weight':'600'});
+                            }
+                            if(callback["script_status"]==-1)
+                            {
+                                trobj.children().eq(3).css({'color':'white','background':'red','font-weight':'600'});
+                            }
+                        }
+                    }
+
+
 
                 },
-                error:function () {
+                error:function (XMLResponse) {
                     console.log("数据抓取失败");
+                    //console.log(XMLResponse.responseText);
                 }
             });
 }
@@ -95,9 +106,6 @@ function displaySourceInfo() {
             var trobj=$("tbody").children().eq(i);
             var trobj_plus=$("tbody").children().eq(i+1);
             queueid=trobj.children().eq(0).children().eq(1).text();
-            //console.log("queue_id="+queueid);
-            //console.log(trobj.children().eq(1).text());
-            //console.log(trobj);
             getSourceInfo(queueid,trobj,i,trobj_plus);
         }
         else {
@@ -106,6 +114,6 @@ function displaySourceInfo() {
     }
 }
 $(document).ready(function () {
-    //$("tbody").find('span.span-info').css({'font-size':'16px','color':'rgb(14,144,210)'});
     setInterval(displaySourceInfo,2000);
+    //displaySourceInfo();
 });

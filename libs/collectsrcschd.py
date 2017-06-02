@@ -33,7 +33,7 @@ def GetSrcQueueConfig():
 
 def CollectSrcMoniInfo():
     args=GetSrcQueueConfig()
-    print len(args)
+    #print len(args)
     # print args
     # print len(args)
     # print args
@@ -45,7 +45,7 @@ def CollectSrcMoniInfo():
             sshuser = r[2]
             sshpwd = r[3]
             scriptpath=r[4]
-            logging.info('begin to check connection of ssh :%s' % srcip)
+            # logging.info('begin to check connection of ssh :%s' % srcip)
             check_list=check_remote(srcip,sshuser,sshpwd,srcpath,scriptpath)
             ssh_status=check_list[0]
             path_status=check_list[1]
@@ -88,15 +88,20 @@ def CollectSrcMoniInfo():
             else:
                 # 检查未通过,不进行数据采集
                 try:
+                    print 'check is error'
+                    print ssh_status
                     conn = MySQLdb.connect(host='127.0.0.1', port=3306, user='root', passwd="simba2016", db='monidb')
                     c = conn.cursor()
-                    c.execute("insert into src_moni_info(src_ssh_status,src_path_status,script_path_status,queue_id,add_time) values(%s,%s,%s,%s,%s)",
-                          [ssh_status,path_status,script_status,r[5],datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")])
+                    c.execute("insert into src_moni_info(src_ssh_status,src_path_status,script_path_status,queue_id,add_time) values(%s,%s,%s,%s,%s)",[ssh_status,path_status,script_status,r[5],datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")])
+                    #c.execute("insert into src_moni_info(src_ssh_status,src_path_status,script_path_status) values(%s,%s,%s)",[ssh_status,path_status,script_status])
                     conn.commit()
+                except Exception,e:
+                    print e
                 except MySQLdb,e:
                     print e
                     conn.rollback()
                 finally:
+                    print 'finally............'
                     c.close()
                     conn.close()
 

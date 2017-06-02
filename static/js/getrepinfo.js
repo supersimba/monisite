@@ -83,8 +83,9 @@ function getTargetInfo(queue_id,trobj,i,trobj_plus) {
                     // }
 
                 },
-                error:function () {
+                error:function (callback) {
                     console.log("数据抓取失败");
+                    console.log(callback);
                 }
             });
 }

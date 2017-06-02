@@ -15,7 +15,8 @@ urlpatterns = [
     url(r'^ormindex/$',TemplateView.as_view(template_name='ormindex.html'),name='ormindex'),
     # url(r'^ormmoni/$', TemplateView.as_view(template_name='ormmoni.html'), name='ormmoni'),
     url(r'ormmoni/$',ormmoni),
-    url(r'display_target_info/$',display_target_info),
-    url(r'display_source_info/$',display_source_info),
+    url(r'^display_target_info/$',display_target_info),
+    url(r'^display_source_info/$',display_source_info),
+    url(r'^ormlogs/$',display_replogs,name='ormlogs'),
 
 ]

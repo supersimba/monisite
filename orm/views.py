@@ -29,6 +29,10 @@ def ormmoni(req):
     dbobj = rep_queue.objects.all()
     return render_to_response('ormmoni.html', {'dblist': dbobj})
 
+def display_replogs(req):
+    print req.POST
+    return render_to_response('ormlogs.html')
+
 def display_target_info(req):
     rid=req.POST["rid"]
     if req.method=='POST':
@@ -51,9 +55,30 @@ def display_target_info(req):
                 'loader_rate':o.loader_rate,
                 'loader_time':o.loader_time,
                 'loader_err':o.loader_err,
-                'add_time':o.add_time
+                'add_time':o.add_time,
+                'record_flag': '1'
             }
             info_json=json.dumps(infodic,cls=CJsonEncoder)
+        else:
+            infodic = {
+                'ssh_status':'',
+                'path_status':'',
+                'script_status':'',
+                'sync_status':'',
+                'active':'',
+                'collect_cnt':'',
+                'collect_err':'',
+                'loader_s_cnt':'',
+                'loader_r_cnt':'',
+                'loader_s_p_cnt':'',
+                'loader_r_p_cnt':'',
+                'loader_rate':'',
+                'loader_time':'',
+                'loader_err':'',
+                'add_time':'',
+                'record_flag': '-1'
+            }
+            info_json = json.dumps(infodic, cls=CJsonEncoder)
         return HttpResponse(info_json)
 
 
@@ -75,7 +100,24 @@ def display_source_info(req):
                 'sender_cnt':o.sender_cnt,
                 'capture_err':o.capture_err,
                 'sender_err':o.sender_err,
-                'add_time':o.add_time
+                'add_time':o.add_time,
+                'record_flag':'1'
             }
             info_json=json.dumps(infodic,cls=CJsonEncoder)
+        else:
+            infodic = {
+                'ssh_status': '',
+                'path_status': '',
+                'script_status': '',
+                'sync_status': '',
+                'active': '',
+                'dbps_cnt': '',
+                'capture_cnt': '',
+                'sender_cnt': '',
+                'capture_err': '',
+                'sender_err': '',
+                'add_time': '',
+                'record_flag': '-1'
+            }
+            info_json = json.dumps(infodic, cls=CJsonEncoder)
         return HttpResponse(info_json)
