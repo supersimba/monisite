@@ -6,6 +6,7 @@ import MySQLdb
 import json
 import datetime
 from datetime import date
+import paramiko
 
 from orm.models import *
 
@@ -29,9 +30,28 @@ def ormmoni(req):
     dbobj = rep_queue.objects.all()
     return render_to_response('ormmoni.html', {'dblist': dbobj})
 
-def display_replogs(req):
-    print req.POST
-    return render_to_response('ormlogs.html')
+def display_replogs(req,RID,TYPE):
+    dbinfo=rep_queue.objects.get(rid=RID)
+    #path sshuser sshpwd
+    print type(TYPE)
+    if TYPE=='1':
+        print dbinfo.src_path
+        return render_to_response('ormlogs.html',{
+            'side_type':TYPE,
+            'path':dbinfo.src_path,
+            'ip':dbinfo.src_ip,
+            'u':dbinfo.src_ssh_user,
+            'p':dbinfo.src_ssh_pwd
+        })
+    else:
+        print dbinfo.tgt_path
+        return render_to_response('ormlogs.html', {
+            'side_type': TYPE,
+            'path': dbinfo.tgt_path,
+            'ip': dbinfo.tgt_ip,
+            'u': dbinfo.tgt_ssh_user,
+            'p': dbinfo.tgt_ssh_pwd
+        })
 
 def display_target_info(req):
     rid=req.POST["rid"]
@@ -121,3 +141,25 @@ def display_source_info(req):
             }
             info_json = json.dumps(infodic, cls=CJsonEncoder)
         return HttpResponse(info_json)
+
+
+#check process
+def check_process(req):
+    if req.method=='POST':
+        result=''
+        sshcli=paramiko.SSHClient()
+        print req.POST['ip']
+        sshcli.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+        try:
+            sshcli.connect(req.POST['ip'], 22, req.POST['u'], req.POST['p'])
+            stdin, stdout, stderr = sshcli.exec_command('sh '+req.POST['path']+'/scripts/check')
+            outstr=stdout.readlines()
+            if outstr:
+                for l in outstr:
+                    result=result+l.replace('\n','<br />')
+                print result
+        except Exception,e:
+            pass
+        finally:
+            return HttpResponse(result)
+            sshcli.close()

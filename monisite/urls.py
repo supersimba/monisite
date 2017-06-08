@@ -14,9 +14,11 @@ urlpatterns = [
     url(r'^ormlogin/$',TemplateView.as_view(template_name='ormlogin.html'),name='ormlogin'),
     url(r'^ormindex/$',TemplateView.as_view(template_name='ormindex.html'),name='ormindex'),
     # url(r'^ormmoni/$', TemplateView.as_view(template_name='ormmoni.html'), name='ormmoni'),
-    url(r'ormmoni/$',ormmoni),
+    url(r'ormmoni/$',ormmoni,name='ormmoni'),
     url(r'^display_target_info/$',display_target_info),
     url(r'^display_source_info/$',display_source_info),
     url(r'^ormlogs/$',display_replogs,name='ormlogs'),
-
+    url(r'^ormlogs/(?P<RID>\d+)/(?P<TYPE>\d+)$',display_replogs,name='ormlogs'),
+    #执行 CHECK脚本函数
+    url(r'^check_process/$',check_process),
 ]

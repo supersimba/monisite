@@ -82,6 +82,10 @@ function getTargetInfo(queue_id,trobj,i,trobj_plus) {
                             if(callback["ssh_status"]==-1 || callback["path_status"]==-1)
                             {
                                 trobj.children().eq(7).css({'color':'white','background':'red','font-weight':'600'});
+                                trobj.children().eq(12).find('.span-link-tlog').css({'color':'white','background':'red'});
+                                trobj.children().eq(12).find('.span-link-tlog').click(function () {
+                                    return false;
+                                });
                             }
                             if(callback["script_status"]==-1)
                             {
