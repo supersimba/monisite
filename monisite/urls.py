@@ -21,4 +21,8 @@ urlpatterns = [
     url(r'^ormlogs/(?P<RID>\d+)/(?P<TYPE>\d+)$',display_replogs,name='ormlogs'),
     #执行 CHECK脚本函数
     url(r'^check_process/$',check_process),
+    #显示 日志
+    url(r'^display_log/$',display_log),
+    #同步操作
+    url(r'^ormoper',ormoper,name='ormoper'),
 ]

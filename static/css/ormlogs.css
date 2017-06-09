@@ -55,13 +55,16 @@ body{
 	display: block;
 	position: relative;
 	text-align: center;
+	color: white;
+	font-size: 15px;
 }
 .dropdown-logs-menu{
 	display: none;
 	z-index: 1000;
 	position: absolute;
 	width: 100%;
-	background-color: rgb(245,245,245);
+	/*background-color: rgb(245,245,245);*/
+	background-color: rgb(0,116,199);
 }
 .dropdown-logs-wrap:hover .dropdown-logs-menu{
 	display: block;
@@ -84,14 +87,16 @@ body{
 	display: block;
 	position: relative;
 	text-align: center;
-	font-size: 13px;
+	font-size: 15px;
+	color: white;
 }
 .dropdown-logr-menu{
 	display: none;
 	z-index: 1000;
 	position: absolute;
 	width: 100%;
-	background-color: rgb(245,245,245);
+	background-color: rgb(0,116,199);
+	/*color: white;*/
 }
 .dropdown-logr-wrap:hover .dropdown-logr-menu{
 	display: block;
@@ -104,4 +109,7 @@ body{
 /**/
 #div-display-log{
 	padding: 15px;font-size: 13px;
+	overflow-y: auto;
 }
+
+

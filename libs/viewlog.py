@@ -16,7 +16,7 @@ class logviewer():
         sshcli.set_missing_host_key_policy(paramiko.AutoAddPolicy())
         try:
             sshcli.connect(self.ip, 22, self.sshuser, self.sshpwd)
-            stdin, stdout, stderr = sshcli.exec_command('ls -lrt '+self.filepath)
+            stdin, stdout, stderr = sshcli.exec_command('ls -lrt '+self.filepath+' | wc -l')
             if stdout:
                 self.check_file_flag=1
             else:
@@ -28,6 +28,27 @@ class logviewer():
             return self.check_file_flag
             sshcli.close()
 
-
-    def ssh_connect(self):
-        cli=paramiko.SSHClient()
+    def getlog_content(self):
+        sshcli = paramiko.SSHClient()
+        sshcli.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+        try:
+            sshcli.connect(self.ip, 22, self.sshuser, self.sshpwd)
+            stdin, stdout, stderr = sshcli.exec_command('ls -lrt ' + self.filepath+' | wc -l')
+            filechk=stdout.read().strip('\n')
+            print filechk
+            if filechk and int(filechk)==1:
+                stdin, stdout, stderr = sshcli.exec_command('tail -50 ' + self.filepath)
+                loglist=stdout.readlines()
+                print loglist
+                if loglist:
+                    for itemstr in loglist:
+                        self.result=self.result+itemstr.replace('\n','<br />')
+                else:
+                    print 'file not existed'
+                    self.result=0
+        except Exception, e:
+            print e
+            self.result = e
+        finally:
+            return self.result
+            sshcli.close()

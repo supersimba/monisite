@@ -9,6 +9,7 @@ from datetime import date
 import paramiko
 
 from orm.models import *
+from libs.viewlog import *
 
 
 class CJsonEncoder(json.JSONEncoder):
@@ -29,6 +30,11 @@ def ormmoni(req):
     dbpwd = 'simba2016'
     dbobj = rep_queue.objects.all()
     return render_to_response('ormmoni.html', {'dblist': dbobj})
+
+#ormoper page
+def ormoper(req):
+    pass
+
 
 def display_replogs(req,RID,TYPE):
     dbinfo=rep_queue.objects.get(rid=RID)
@@ -148,7 +154,7 @@ def check_process(req):
     if req.method=='POST':
         result=''
         sshcli=paramiko.SSHClient()
-        print req.POST['ip']
+        #print req.POST['ip']
         sshcli.set_missing_host_key_policy(paramiko.AutoAddPolicy())
         try:
             sshcli.connect(req.POST['ip'], 22, req.POST['u'], req.POST['p'])
@@ -163,3 +169,9 @@ def check_process(req):
         finally:
             return HttpResponse(result)
             sshcli.close()
+
+#显示日志 信息
+def display_log(req):
+    if req.method=='POST':
+        lv=logviewer(req.POST['ip'], req.POST['path'], req.POST['u'], req.POST['p'],req.POST['logname'])
+        return HttpResponse(lv.getlog_content())

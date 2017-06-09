@@ -22,8 +22,21 @@ function chkProcess(ip,path,u,p)
 }
 
 
-function getSyncLogs() {
-    
+function getSyncLogs(ip,path,u,p,logname) {
+    $.ajax({
+        type:"POST",
+        async:true,
+        dataType:"text",
+        data:{'ip':ip,'path':path,'u':u,'p':p,'logname':logname},
+        url: "/display_log/",
+        success:function (callback) {
+            $('#div-display-log').html(callback);
+            document.getElementById('div-display-log').scrollTop=document.getElementById('div-display-log').scrollHeight;
+        },
+        error:function (callback) {
+            $('#div-display-log').html('日志查看出错')
+        }
+    });
 }
 
 $(document).ready(function () {
@@ -43,4 +56,48 @@ $(document).ready(function () {
         p=$('.div-dbinfo').find('.span-dbinfo-p').text();
         chkProcess(ip,path,u,p);
     });
+    // #查看vagentd日志
+    $('#btn-vag-log').bind('click',function () {
+        ip=$('.div-dbinfo').find('.span-dbinfo-ip').text();
+        path=$('.div-dbinfo').find('.span-dbinfo-path').text();
+        u=$('.div-dbinfo').find('.span-dbinfo-u').text();
+        p=$('.div-dbinfo').find('.span-dbinfo-p').text();
+        getSyncLogs(ip,path,u,p,'log.vagentd');
+    });
+    // 查看sender日志
+    $('#btn-snd-log').bind('click',function () {
+        ip=$('.div-dbinfo').find('.span-dbinfo-ip').text();
+        path=$('.div-dbinfo').find('.span-dbinfo-path').text();
+        u=$('.div-dbinfo').find('.span-dbinfo-u').text();
+        p=$('.div-dbinfo').find('.span-dbinfo-p').text();
+        getSyncLogs(ip,path,u,p,'log.sender');
+    });
+
+    var links_logs=$('.dropdown-logs-menu').find('a');
+
+    for(var m=0;m<links_logs.length;m++)
+    {
+        links_logs.eq(m).bind('click',function (e) {
+            var logname="log."+$(this).text();
+            ip=$('.div-dbinfo').find('.span-dbinfo-ip').text();
+            path=$('.div-dbinfo').find('.span-dbinfo-path').text();
+            u=$('.div-dbinfo').find('.span-dbinfo-u').text();
+            p=$('.div-dbinfo').find('.span-dbinfo-p').text();
+            getSyncLogs(ip,path,u,p,logname);
+        });
+    }
+
+    var links_logr=$('.dropdown-logr-menu').find('a');
+
+    for(var m=0;m<links_logr.length;m++)
+    {
+        links_logr.eq(m).bind('click',function (e) {
+            var logname="log."+$(this).text();
+            ip=$('.div-dbinfo').find('.span-dbinfo-ip').text();
+            path=$('.div-dbinfo').find('.span-dbinfo-path').text();
+            u=$('.div-dbinfo').find('.span-dbinfo-u').text();
+            p=$('.div-dbinfo').find('.span-dbinfo-p').text();
+            getSyncLogs(ip,path,u,p,logname);
+        });
+    }
 });
