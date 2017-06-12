@@ -1,0 +1,23 @@
+.btn-oper{
+    font-size: 12px;border: 0px;
+}
+
+.btn-oper-cleancache{
+    background-color: #EE0000;color: white;
+    border: 0px;font-weight: 300;
+}
+.div-cmd-display{
+    margin: 15px;
+    width: 100%;
+    height: 350px;
+    border: 2px solid rgb(238,238,238);
+    padding-top: 5px;
+    font-size: 15px;
+    background-color: #FFFFF0;
+}
+.div-dbinfo{
+    height: 30px;
+}
+.span-user-pwd{
+    display: none;
+}

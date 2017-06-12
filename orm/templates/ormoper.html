@@ -10,10 +10,10 @@
         <script type="text/javascript" src="/static/js/jquery-json-3.2.1.js"></script>
         <script type="text/javascript" src="/static/js/tgt-getrepinfo.js"></script>
         <script type="text/javascript" src="/static/js/src-getrepinfo.js"></script>
-        <script type="text/javascript" src="/static/js/ormlogs.js"></script>
+        <script type="text/javascript" src="/static/js/ormoper.js"></script>
 		<link rel="stylesheet" href="/static/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="/static/css/rmappindex.css" />
-        <link rel="stylesheet" href="/static/css/ormlogs.css">
+        <link rel="stylesheet" href="/static/css/ormoper.css">
 
 	</head>
 	<body>
@@ -86,7 +86,37 @@
 
                     <!--操作 block-->
 					<div class="col-md-12">
+                        <div class="col-md-6">
+                            <h4>Source</h4>
+                            <div class="div-dbinfo" id="div-src-dbinfo">
+                                <span>{{ dbinfo.src_ip }}</span>:<span>{{ dbinfo.src_path }}</span>
+                                <span class="span-user-pwd">{{ dbinfo.src_ssh_user }}</span>
+                                <span class="span-user-pwd">{{ dbinfo.src_ssh_pwd }}</span>
+                            </div>
+                            <button class="btn-oper" id="btn-src-startup">启动进程</button>
+                            <button class="btn-oper" id="btn-src-stop">停止进程</button>
+                            <button class="btn-oper btn-oper-cleancache">清除缓存</button>
+                            <button class="btn-oper" id="btn-src-chk">检查进程</button>
+                            <button class="btn-oper">控制台导出对象</button>
+                            <button class="btn-oper">全同步</button>
+                            <button class="btn-oper">编辑mapping</button>
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Target</h4>
+                            <div class="div-dbinfo" id="div-tgt-dbinfo">
+                                <span>{{ dbinfo.tgt_ip }}</span>:<span>{{ dbinfo.tgt_path }}</span>
+                                <span class="span-user-pwd">{{ dbinfo.tgt_ssh_user }}</span>
+                                <span class="span-user-pwd">{{ dbinfo.tgt_ssh_pwd }}</span>
+                            </div>
+                            <button class="btn-oper" id="btn-tgt-startup">启动进程</button>
+                            <button class="btn-oper" id="btn-tgt-stop">停止进程</button>
+                            <button class="btn-oper btn-oper-cleancache">清除缓存</button>
+                            <button class="btn-oper" id="btn-tgt-chk">检查进程</button>
+                            <button class="btn-oper">同步对象</button>
+                        </div>
+                        <div class="col-md-12 div-cmd-display">
 
+                        </div>
 					</div>
 
 			</div>

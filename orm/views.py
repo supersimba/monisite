@@ -10,6 +10,7 @@ import paramiko
 
 from orm.models import *
 from libs.viewlog import *
+from libs.syncoper import *
 
 
 class CJsonEncoder(json.JSONEncoder):
@@ -32,8 +33,10 @@ def ormmoni(req):
     return render_to_response('ormmoni.html', {'dblist': dbobj})
 
 #ormoper page
-def ormoper(req):
-    pass
+def ormoper(req,RID):
+    print RID
+    dbinfo=rep_queue.objects.get(rid=RID)
+    return render_to_response('ormoper.html',{'dbinfo':dbinfo})
 
 
 def display_replogs(req,RID,TYPE):
@@ -175,3 +178,18 @@ def display_log(req):
     if req.method=='POST':
         lv=logviewer(req.POST['ip'], req.POST['path'], req.POST['u'], req.POST['p'],req.POST['logname'])
         return HttpResponse(lv.getlog_content())
+
+
+#复制 操作
+def sync_oper(req):
+    if req.method=='POST':
+        ip=req.POST['ip']
+        path=req.POST['path']
+        u=req.POST['u']
+        p=req.POST['p']
+        run_flag=req.POST['runflag']
+        runobj=SyncOper(ip,path,u,p,run_flag)
+        run_result=runobj.runcmd()
+        print 'view :run_result'
+        print run_result
+        return HttpResponse(run_result)

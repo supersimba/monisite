@@ -24,5 +24,7 @@ urlpatterns = [
     #显示 日志
     url(r'^display_log/$',display_log),
     #同步操作
-    url(r'^ormoper',ormoper,name='ormoper'),
+    url(r'^ormoper/(?P<RID>\d+)$',ormoper,name='ormoper'),
+    #
+    url(r'^sync_oper/$',sync_oper),
 ]
