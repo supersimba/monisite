@@ -20,16 +20,19 @@ class SyncOper():
             try:
                 cli.connect(self.ip,22,self.ssh_u,self.ssh_p)
                 stdin, stdout, stderr = cli.exec_command("sh " + self.path + "/scripts/check")
-                if stdout.readlines():
-                    for item in stdout.readlines():
+                outlist=stdout.readlines()
+                errlist=stderr.readlines()
+                if outlist:
+                    for item in outlist:
                         self.result=self.result+item.replace('\n','<br />')
-                if stderr.readlines():
-                    for item in stderr.readlines():
+                if errlist:
+                    for item in errlist:
                         self.result=self.result+item.replace('\n','<br />')
             except Exception,e:
                 print e
                 self.result=e
             finally:
+                print self.result
                 return self.result
         if self.run_flag == '1':
             print 'begin to run cmd of startup'
@@ -37,13 +40,15 @@ class SyncOper():
             cli.set_missing_host_key_policy(paramiko.AutoAddPolicy())
             try:
                 cli.connect(self.ip,22,self.ssh_u,self.ssh_p)
-                stdin, stdout, stderr = cli.exec_command("sh " + self.path + "/scripts/start_vagentd")
-                if stdout.readlines():
-                    for item in stdout.readlines():
-                        self.result=self.result+item.replace('\n','<br />')
-                if stderr.readlines():
-                    for item in stderr.readlines():
-                        self.result=self.result+item.replace('\n','<br />')
+                stdin, stdout, stderr = cli.exec_command("sh " + self.path + "/scripts/startup.sh")
+                outlist = stdout.readlines()
+                errlist = stderr.readlines()
+                if outlist:
+                    for item in outlist:
+                        self.result = self.result + item.replace('\n', '<br />')
+                if errlist:
+                    for item in errlist:
+                        self.result = self.result + item.replace('\n', '<br />')
             except Exception,e:
                 print e
                 self.result=e
@@ -56,16 +61,19 @@ class SyncOper():
             try:
                 cli.connect(self.ip,22,self.ssh_u,self.ssh_p)
                 stdin, stdout, stderr = cli.exec_command("sh " + self.path + "/scripts/stop_vagentd")
-                if stdout.readlines():
-                    for item in stdout.readlines():
-                        self.result=self.result+item.replace('\n','<br />')
-                if stderr.readlines():
-                    for item in stderr.readlines():
-                        self.result=self.result+item.replace('\n','<br />')
+                outlist = stdout.readlines()
+                errlist = stderr.readlines()
+                if outlist:
+                    for item in outlist:
+                        self.result = self.result + item.replace('\n', '<br />')
+                if errlist:
+                    for item in errlist:
+                        self.result = self.result + item.replace('\n', '<br />')
             except Exception,e:
                 print e
                 self.result=e
             finally:
+                cli.close()
                 return self.result
 
 
