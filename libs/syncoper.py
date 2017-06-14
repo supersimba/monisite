@@ -2,7 +2,8 @@
 import paramiko
 
 
-#run_flag:操作类型 0 执行check;1 startup;2 stop
+#run_flag:操作类型 0 执行check;1 startup;2 stop;3 clear cache;
+#run_flag:操作类型 4 src端vman导出对象;
 class SyncOper():
     def __init__(self,ip,path,ssh_u,ssh_p,run_flag):
         self.ip=ip
@@ -61,6 +62,69 @@ class SyncOper():
             try:
                 cli.connect(self.ip,22,self.ssh_u,self.ssh_p)
                 stdin, stdout, stderr = cli.exec_command("sh " + self.path + "/scripts/stop_vagentd")
+                outlist = stdout.readlines()
+                errlist = stderr.readlines()
+                if outlist:
+                    for item in outlist:
+                        self.result = self.result + item.replace('\n', '<br />')
+                if errlist:
+                    for item in errlist:
+                        self.result = self.result + item.replace('\n', '<br />')
+            except Exception,e:
+                print e
+                self.result=e
+            finally:
+                cli.close()
+                return self.result
+        if self.run_flag == '3':
+            print 'begin to run cmd of clear cache'
+            cli = paramiko.SSHClient()
+            cli.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+            try:
+                cli.connect(self.ip,22,self.ssh_u,self.ssh_p)
+                stdin, stdout, stderr = cli.exec_command("sh " + self.path + "/scripts/clean_vagentd")
+                outlist = stdout.readlines()
+                errlist = stderr.readlines()
+                if outlist:
+                    for item in outlist:
+                        self.result = self.result + item.replace('\n', '<br />')
+                if errlist:
+                    for item in errlist:
+                        self.result = self.result + item.replace('\n', '<br />')
+            except Exception,e:
+                print e
+                self.result=e
+            finally:
+                cli.close()
+                return self.result
+        if self.run_flag == '4':
+            print 'begin to run cmd of clear cache'
+            cli = paramiko.SSHClient()
+            cli.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+            try:
+                cli.connect(self.ip,22,self.ssh_u,self.ssh_p)
+                stdin, stdout, stderr = cli.exec_command("sh " + self.path + "/scripts/exp_dic.sh")
+                outlist = stdout.readlines()
+                errlist = stderr.readlines()
+                if outlist:
+                    for item in outlist:
+                        self.result = self.result + item.replace('\n', '<br />')
+                if errlist:
+                    for item in errlist:
+                        self.result = self.result + item.replace('\n', '<br />')
+            except Exception,e:
+                print e
+                self.result=e
+            finally:
+                cli.close()
+                return self.result
+        if self.run_flag == '5':
+            print 'begin to run cmd of fullsync'
+            cli = paramiko.SSHClient()
+            cli.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+            try:
+                cli.connect(self.ip,22,self.ssh_u,self.ssh_p)
+                stdin, stdout, stderr = cli.exec_command("sh " + self.path + "/scripts/full_expdata.sh")
                 outlist = stdout.readlines()
                 errlist = stderr.readlines()
                 if outlist:
