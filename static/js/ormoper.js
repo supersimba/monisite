@@ -2,6 +2,18 @@
  * Created by root on 17-6-12.
  */
 
+function showMask() {
+    $('.div-mask').css("height",$(document).height());
+    $('.div-mask').css("width",$(document).width());
+    $('.div-mask').show();
+}
+function hideMask() {
+    $('.div-mask').hide();
+    // $('.div-mask').css("height",$(document).height());
+    // $('.div-mask').css("width",$(document).width());
+}
+
+
 $(document).ready(function () {
 //
     var src_ip=$('#div-src-dbinfo').children('span').eq(0).text();
@@ -12,6 +24,8 @@ $(document).ready(function () {
     var tgt_path=$('#div-tgt-dbinfo').children('span').eq(1).text();
     var tgt_u=$('#div-tgt-dbinfo').children('span').eq(2).text();
     var tgt_p=$('#div-tgt-dbinfo').children('span').eq(3).text();
+
+    $('.div-mask').hide();
 
 
     $('#btn-src-clean').bind('click',function () {
@@ -217,12 +231,46 @@ $(document).ready(function () {
     //    执行进程检查
         $.ajax({
         type:"POST",
-        async:false,
+        async:true,
         dataType:"text",
         data:{'ip':src_ip,'path':src_path,'u':src_u,'p':src_p,'runflag':5},
         url: "/sync_oper/",
         beforeSend:function () {
             var c=window.confirm('开始导出数据?');
+            if(c!=true)
+            {
+                return false;
+            }
+            else
+            {
+                showMask();
+            }
+        },
+        success:function (callback) {
+
+            $('.div-cmd-display').html(callback);
+            document.getElementById('id-cmd-display').scrollTop=document.getElementById('id-cmd-display').scrollHeight;
+        },
+        error:function (callback) {
+            hideMask();
+            $('.div-cmd-display').html('操作出错');
+        },
+        complete:function () {
+                hideMask();
+            }
+        });
+    });
+
+    $('#btn-edit-mapping').bind('click',function () {
+    //    edit mapping.ini
+        $.ajax({
+        type:"POST",
+        async:true,
+        dataType:"text",
+        data:{'ip':src_ip,'path':src_path,'u':src_u,'p':src_p,'runflag':6},
+        url: "/sync_oper/",
+        beforeSend:function () {
+            var c=window.confirm('编辑同步表配置文件?');
             if(c!=true)
             {
                 return false;
@@ -233,8 +281,12 @@ $(document).ready(function () {
             document.getElementById('id-cmd-display').scrollTop=document.getElementById('id-cmd-display').scrollHeight;
         },
         error:function (callback) {
-            $('.div-cmd-display').html('操作出错')
-        }
+            // hideMask();
+            $('.div-cmd-display').html('操作出错');
+        },
+        complete:function () {
+                // hideMask();
+            }
         });
     });
 });

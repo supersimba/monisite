@@ -139,8 +139,28 @@ class SyncOper():
             finally:
                 cli.close()
                 return self.result
+        if self.run_flag == '6':
+            print 'begin to edit mapping'
+            cli = paramiko.SSHClient()
+            cli.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+            try:
+                cli.connect(self.ip,22,self.ssh_u,self.ssh_p)
+                stdin, stdout, stderr = cli.exec_command("cat " + self.path + "/config/mapping.ini")
+                outlist = stdout.readlines()
+                errlist = stderr.readlines()
+                if outlist:
+                    for item in outlist:
+                        self.result = self.result + item.replace('\n', '<br />')
+                if errlist:
+                    for item in errlist:
+                        self.result = self.result + item.replace('\n', '<br />')
+            except Exception,e:
+                print e
+                self.result=e
+            finally:
+                cli.close()
+                return self.result
 
 
-
-    def check_pro(self):
+    def edit_mapping(self):
         pass

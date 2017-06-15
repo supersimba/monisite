@@ -99,7 +99,7 @@
                             <button class="btn-oper" id="btn-src-chk">检查进程</button>
                             <button class="btn-oper" id="btn-src-dic">控制台导出对象</button>
                             <button class="btn-oper" id="btn-src-fullsync">全同步</button>
-                            <button class="btn-oper">编辑mapping</button>
+                            <button class="btn-oper" id="btn-edit-mapping">编辑mapping</button>
                         </div>
                         <div class="col-md-6">
                             <h4>Target</h4>
@@ -115,18 +115,31 @@
                             <button class="btn-oper">同步对象</button>
                         </div>
                         <div class="col-md-12 div-cmd-display" id="id-cmd-display">
+                            <div>
+                                <textarea id="edit-block">
+
+                                </textarea>
+                            </div>
 
                         </div>
 					</div>
 
 			</div>
-
 			<!--footer-->
 			<div class="row">
 				<div class="col-md-12" style="text-align: center;font-size: 12px;margin-top: 50px;">
 					copyright by ©李丹,信息技术部
 				</div>
 			</div>
+
+{#                 遮罩层#}
+            <div class="div-mask">
+                <div class="div-loading">
+                    <img src="/static/img/loading1.gif" style="width: 50px;height: 50px" />
+                </div>
+            </div>
+
+
 		</div>
 
 	</body>
