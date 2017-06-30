@@ -55,7 +55,13 @@
     margin-left: -150px;
 }
 
-#edit-block{
+#div-edit-block{
     width: 100%;
     height: 100%;
+    display: none;
+}
+
+#edit-block{
+    width: 100%;
+    height: 300px;
 }

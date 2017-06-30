@@ -43,11 +43,11 @@
 					<!--<div class="collapse" id="bs-example-navbar-collapse-1">1</div>-->
 					<ul class="nav nav-stacked collapse navbar-collapse" id="sider-menu">
 						<li role="presentation" class="active">
-							<a href="#">
+							<a href="{% url 'ormindex' %}">
 								<span class="glyphicon glyphicon-home" style="margin-right: 15px;"></span>平台首页</a>
 						</li>
 						<li role="presentation">
-							<a href="#"><span class="glyphicon glyphicon-th-list" style="margin-right: 15px;"></span>同步监控</a>
+							<a href="{% url 'ormmoni' %}"><span class="glyphicon glyphicon-th-list" style="margin-right: 15px;"></span>同步监控</a>
 						</li>
 						<li role="presentation">
 							<a href="#"><span class="glyphicon glyphicon-stats" style="margin-right: 15px;"></span>主机监控</a>
@@ -71,7 +71,7 @@
 					<div class="col-md-12">
 						<ol class="breadcrumb">
 							<li>
-								<a href="#">平台首页</a>
+								<a href="{% url 'ormindex' %}">平台首页</a>
 							</li>
 							<li>
 								<a href="{% url 'ormmoni' %}">同步监控</a>
@@ -115,10 +115,14 @@
                             <button class="btn-oper">同步对象</button>
                         </div>
                         <div class="col-md-12 div-cmd-display" id="id-cmd-display">
-                            <div>
-                                <textarea id="edit-block">
+                            <div id="div-edit-block">
+                                <form method="post">
+                                    <textarea id="edit-block">
 
-                                </textarea>
+                                    </textarea>
+                                    <input type="button" id="btn-edit" value="更新"><input type="button" id="btn-edit-exit" value="退出">
+                                </form>
+
                             </div>
 
                         </div>

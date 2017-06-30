@@ -150,10 +150,10 @@ class SyncOper():
                 errlist = stderr.readlines()
                 if outlist:
                     for item in outlist:
-                        self.result = self.result + item.replace('\n', '<br />')
+                        self.result = self.result + item
                 if errlist:
                     for item in errlist:
-                        self.result = self.result + item.replace('\n', '<br />')
+                        self.result = self.result + item
             except Exception,e:
                 print e
                 self.result=e

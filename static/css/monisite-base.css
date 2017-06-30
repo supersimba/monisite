@@ -1,0 +1,163 @@
+body {
+	padding: 0;
+	margin: 0px;
+	background-color: rgb(242,242,242);
+	font-family: 'Open Sans';
+	font-size: 13px;
+	/*width: 100%;*/
+}
+
+#wrapper {
+    padding-left: 0;
+    width: 100%;
+}
+#content-wrapper{
+    margin-left: 201px;
+    background-color: white;
+}
+
+@media(max-width:768px) {
+    #content-wrapper {
+    background-color: white;
+     padding: 0px;
+     margin: 0px;
+    }
+}
+
+
+/*navbar-header*/
+.navbar{
+	background: rgb(67,142,185);margin-bottom: 0px;
+}
+.navbar-default .navbar-brand {
+    color: white;
+    font-size: 15px;
+}
+/*navbar-header*/
+
+
+/*navbar-header 右侧菜单*/
+.navbar-right-menu{
+	padding: 0 15px;
+}
+
+.navbar-right-menu>li {
+    display: inline-block;
+    float: left;
+    background-color: rgb(67,142,185);
+}
+
+.navbar-right-menu>li>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 20px;
+    color: white;
+}
+.navbar-right-menu>li>a:visited {
+    background-color: rgb(67,142,185);
+    border-right,border-left: 1px solid white;
+    color: white;
+}
+.navbar-right-menu>li>a:hover {
+    background-color: rgb(67,142,185);
+    border-right,border-left: 1px solid white;
+    color: white;
+}
+.navbar-right-menu>li>a:active {
+    background-color: rgb(67,142,185);
+    border-right,border-left: 1px solid white;
+    color: white;
+}
+
+/*END navbar-header 右侧菜单*/
+
+
+/*左侧菜单*/
+.navbar-default{
+	border-radius: 0px;
+}
+
+@media (min-width: 768px) {
+	.sidebar{
+	width: 200px;
+	margin-top: 51px;
+	z-index: 50;
+	position: absolute;
+	background-color: rgb(249,249,249);
+	}
+}
+.navbar-collapse{
+	padding: 0px;
+}
+.navbar-right{
+	margin-right: 0px;
+}
+.navbar-side a{
+	color: rgb(88,88,88);
+	padding:0px;
+	margin: 0px;
+	height: 35px;
+	display: block;
+	text-decoration: none;
+	font-size: 13p;
+	line-height: 35px;
+	text-align: center;
+	border-bottom: 1px solid rgb(229,229,229);
+}
+.navbar-side a:hover {
+	background-color: white;
+	border-left: 3px solid rgb(67,142,189);
+	border-right: 3px solid rgb(67,142,189);
+	font-size: 15px;
+	color: rgb(38,121,197);
+	/*height: 100%;*/
+}
+
+.collapse.in{
+	background-color: rgb(249,249,249);
+}
+/*END 左侧菜单*/
+
+
+
+
+
+
+/*侧边栏子菜单*/
+.sidebar-sub-menu{
+	list-style-type: none;
+	margin: 0px;
+	padding:5px 0px;
+	text-align: center;
+	font-size:12px;
+	background-color: white;
+	display: none;
+}
+.sidebar-sub-menu li{
+	padding:5px 0px;
+}
+
+.sidebar-sub-menu li>a{
+	border: 0px;
+}
+
+.sidebar-sub-menu li>a:hover{
+	border: 0px;
+	font-size: 13px;
+	background-color: lightyellow;
+	color: black;
+}
+
+/*侧边栏子菜单*/
+
+
+
+
+/*内容区域*/
+.content-row{
+	margin: 0px;
+	padding: 0px;
+}
+
+
+/*END内容区域*/

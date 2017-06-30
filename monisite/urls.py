@@ -27,4 +27,6 @@ urlpatterns = [
     url(r'^ormoper/(?P<RID>\d+)$',ormoper,name='ormoper'),
     #
     url(r'^sync_oper/$',sync_oper),
+    #
+    url(r'^edit_mapping',edit_mapping),
 ]

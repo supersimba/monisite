@@ -193,3 +193,8 @@ def sync_oper(req):
         print 'view :run_result'
         print run_result
         return HttpResponse(run_result)
+
+
+def edit_mapping(req):
+    if req.method=='POST':
+        pass

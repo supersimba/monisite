@@ -27,7 +27,6 @@ $(document).ready(function () {
 
     $('.div-mask').hide();
 
-
     $('#btn-src-clean').bind('click',function () {
         // src clean
         $.ajax({
@@ -275,9 +274,13 @@ $(document).ready(function () {
             {
                 return false;
             }
+            else
+            {
+                $('#div-edit-block').show();
+            }
         },
         success:function (callback) {
-            $('.div-cmd-display').html(callback);
+            $('#edit-block').html(callback);
             document.getElementById('id-cmd-display').scrollTop=document.getElementById('id-cmd-display').scrollHeight;
         },
         error:function (callback) {
@@ -285,8 +288,17 @@ $(document).ready(function () {
             $('.div-cmd-display').html('操作出错');
         },
         complete:function () {
-                // hideMask();
+                // $('#div-edit-block').hide();
             }
         });
+    });
+
+    $('#btn-edit').bind('click',function () {
+        alert('功能后面版本开发!');
+        $('#div-edit-block').hide();
+    });
+
+    $('#btn-edit-exit').bind('click',function () {
+        $('#div-edit-block').hide();
     });
 });
