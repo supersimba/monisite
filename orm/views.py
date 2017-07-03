@@ -1,7 +1,9 @@
 #coding:utf-8
 
 from django.shortcuts import render,render_to_response
-from django.http import HttpRequest,HttpResponse
+from django.http import HttpRequest,HttpResponse,HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import authenticate,login,logout
 import MySQLdb
 import json
 import datetime
@@ -12,7 +14,7 @@ from orm.models import *
 from libs.viewlog import *
 from libs.syncoper import *
 
-
+# 解决json接受日期有问题
 class CJsonEncoder(json.JSONEncoder):
     def default(self, obj):
         if isinstance(obj,datetime.datetime):
@@ -23,7 +25,28 @@ class CJsonEncoder(json.JSONEncoder):
             return json.JSONEncoder.default(self,obj)
 
 
+def ormlogin_action(req):
+    u=req.POST['username']
+    p=req.POST['password']
+    user=authenticate(username=u,password=p)
+    if user is not None:
+        login(req,user)
+        return HttpResponseRedirect('/ormindex/')
+    else:
+        return HttpResponseRedirect('/ormlogin/')
+
+
+def ormlogout(req):
+    logout(req)
+    return HttpResponseRedirect('/ormlogin/')
+
+@login_required(login_url='/ormlogin/')
+def ormindex(req):
+    return render_to_response('ormindex.html')
+
+
 #ormmoni page
+@login_required(login_url='/ormlogin/')
 def ormmoni(req):
     info = []
     dbip = '10.200.8.106'
@@ -33,6 +56,7 @@ def ormmoni(req):
     return render_to_response('ormmoni.html', {'dblist': dbobj})
 
 #ormoper page
+@login_required(login_url='/ormlogin/')
 def ormoper(req,RID):
     print RID
     dbinfo=rep_queue.objects.get(rid=RID)
@@ -198,3 +222,5 @@ def sync_oper(req):
 def edit_mapping(req):
     if req.method=='POST':
         pass
+
+
