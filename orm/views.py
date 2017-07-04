@@ -42,7 +42,9 @@ def ormlogout(req):
 
 @login_required(login_url='/ormlogin/')
 def ormindex(req):
-    return render_to_response('ormindex.html')
+    # u=req.GET['loginuser']
+    # print req.user.username
+    return render_to_response('ormindex.html',{'loginuser':req.user.username})
 
 
 #ormmoni page
