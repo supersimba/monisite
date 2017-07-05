@@ -55,17 +55,20 @@ body {
 }
 .navbar-right-menu>li>a:visited {
     background-color: rgb(67,142,185);
-    border-right,border-left: 1px solid white;
+    border-right: 1px solid white;
+	border-left: 1px solid white;
     color: white;
 }
 .navbar-right-menu>li>a:hover {
     background-color: rgb(67,142,185);
-    border-right,border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
     color: white;
 }
 .navbar-right-menu>li>a:active {
     background-color: rgb(67,142,185);
-    border-right,border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
     color: white;
 }
 
@@ -99,7 +102,7 @@ body {
 	height: 35px;
 	display: block;
 	text-decoration: none;
-	font-size: 13p;
+	font-size: 13px;
 	line-height: 35px;
 	text-align: center;
 	border-bottom: 1px solid rgb(229,229,229);

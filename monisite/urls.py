@@ -13,11 +13,9 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     #
     url(r'^ormlogin/$',TemplateView.as_view(template_name='ormlogin.html'),name='ormlogin'),
-    # url(r'^ormindex/$',TemplateView.as_view(template_name='ormindex.html'),name='ormindex'),
     url(r'^ormlogin_action/$',ormlogin_action,name='ormlogin_action'),
     url(r'^ormlogout/$',ormlogout,name='ormlogout'),
     url(r'^ormindex/$',ormindex,name='ormindex'),
-    # url(r'^ormmoni/$', TemplateView.as_view(template_name='ormmoni.html'), name='ormmoni'),
     url(r'ormmoni/$',ormmoni,name='ormmoni'),
     url(r'^display_target_info/$',display_target_info),
     url(r'^display_source_info/$',display_source_info),

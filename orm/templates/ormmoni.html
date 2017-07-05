@@ -161,7 +161,7 @@
 
 									</td>
                                     <td>
-{#                                        s time#}
+                                        {# s time#}
                                     </td>
 									<td>
 										{{ l.tgt_ip }}:{{ l.tgt_path }}
@@ -174,14 +174,12 @@
                                     <td></td>
 									<td>
 										<div>
-{#                                            <a href="{% url 'ormlogs' RID=l.rid %}" onmouseover="showDiv(this);">查看</a>#}
                                             <span class="span-link-slog"><a href="{% url 'ormlogs' RID=l.rid TYPE=1 %}">S端</a></span>
                                             <span class="span-link-tlog"><a href="{% url 'ormlogs' RID=l.rid TYPE=2 %}">T端</a></span>
                                         </div>
 									</td>
 									<td>
 										<a href="{% url 'ormoper' RID=l.rid %}">同步操作</a>
-{#									    <a href="#">同步操作</a>#}
                                     </td>
 								</tr>
 								<tr class="td-yc">
@@ -195,7 +193,6 @@
                                             传送进程报错-<span id="span-sender-err" class="span-info"></span>&nbsp;&nbsp;&nbsp;
 										</div>
 										<div>
-{#											<span style="font-size: 18px;">S</span>：分析进程状态：OK&nbsp;&nbsp;传输进程状态：OK&nbsp;&nbsp;报错：#}
 										</div>
 										<div>
 											<span style="font-size: 18px;">T</span>：

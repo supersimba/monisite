@@ -1,7 +1,7 @@
 #coding:utf-8
 import os
 import sys
-import xadmin
+# import xadmin
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,8 +25,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'orm',
-    'xadmin',
-    'crispy_forms',
+    # 'xadmin',
+    # 'crispy_forms',
 ]
 
 MIDDLEWARE_CLASSES = [

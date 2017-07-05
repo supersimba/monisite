@@ -204,7 +204,7 @@ $(document).ready(function () {
     //    执行进程检查
         $.ajax({
         type:"POST",
-        async:false,
+        async:true,
         dataType:"text",
         data:{'ip':src_ip,'path':src_path,'u':src_u,'p':src_p,'runflag':4},
         url: "/sync_oper/",
@@ -213,6 +213,10 @@ $(document).ready(function () {
             if(c!=true)
             {
                 return false;
+            }
+            else
+            {
+                $('#div-zhezao').show();
             }
         },
         success:function (callback) {
@@ -276,7 +280,7 @@ $(document).ready(function () {
             }
             else
             {
-                $('#div-edit-block').show();
+                $('#div-zhezao').show();
             }
         },
         success:function (callback) {
