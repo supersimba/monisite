@@ -15,7 +15,6 @@
         <script type="text/javascript" src="/static/js/tgt-getrepinfo.js"></script>
         <script type="text/javascript" src="/static/js/src-getrepinfo.js"></script>
         <script type="text/javascript" src="/static/js/ormoper.js"></script>
-{#		<link rel="stylesheet" href="/static/css/rmappindex.css" />#}
         <link rel="stylesheet" href="/static/css/ormoper.css">
 
 	</head>
@@ -45,7 +44,7 @@
 					</li>
 					<li>
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user">
-							</i> 欢迎登陆，{{ loginuser }} <b class="caret"></b>
+							</i> 欢迎登陆，{{ request.user.username }} <b class="caret"></b>
 						</a>
 						<ul class="dropdown-menu">
 							<li>
@@ -177,7 +176,11 @@
 
 		</div>
 	</body>
-    <div style="background-color: #c1e2b3;display: none;" id="div-zhezao">
-        exporting......
+    {# zhe zhao   #}
+    <div id="div-mask">
+        <div id="mask-subdiv">
+            <img src="/static/img/loading1.gif" width="50px" height="50px">
+        </div>
     </div>
+    {# END zhe zhao   #}
 </html>

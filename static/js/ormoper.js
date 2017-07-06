@@ -3,14 +3,12 @@
  */
 
 function showMask() {
-    $('.div-mask').css("height",$(document).height());
-    $('.div-mask').css("width",$(document).width());
-    $('.div-mask').show();
+    $('#div-mask').css("height",$(document).height());
+    $('#div-mask').css("width",$(document).width());
+    $('#div-mask').show();
 }
 function hideMask() {
-    $('.div-mask').hide();
-    // $('.div-mask').css("height",$(document).height());
-    // $('.div-mask').css("width",$(document).width());
+    $('#div-mask').hide();
 }
 
 
@@ -25,7 +23,8 @@ $(document).ready(function () {
     var tgt_u=$('#div-tgt-dbinfo').children('span').eq(2).text();
     var tgt_p=$('#div-tgt-dbinfo').children('span').eq(3).text();
 
-    $('.div-mask').hide();
+    // $('#div-mask').hide();
+    hideMask();
 
     $('#btn-src-clean').bind('click',function () {
         // src clean
@@ -216,16 +215,20 @@ $(document).ready(function () {
             }
             else
             {
-                $('#div-zhezao').show();
+                showMask();
             }
         },
         success:function (callback) {
+            hideMask();
             $('.div-cmd-display').html(callback);
             document.getElementById('id-cmd-display').scrollTop=document.getElementById('id-cmd-display').scrollHeight;
         },
         error:function (callback) {
             $('.div-cmd-display').html('操作出错')
-        }
+        },
+            completed:function () {
+                hideMask();
+            }
         });
     });
 
@@ -250,7 +253,7 @@ $(document).ready(function () {
             }
         },
         success:function (callback) {
-
+            hideMask();
             $('.div-cmd-display').html(callback);
             document.getElementById('id-cmd-display').scrollTop=document.getElementById('id-cmd-display').scrollHeight;
         },

@@ -98,12 +98,12 @@ class SyncOper():
                 cli.close()
                 return self.result
         if self.run_flag == '4':
-            print 'begin to run cmd of clear cache'
+            print 'begin to run cmd of export dictionary'
             cli = paramiko.SSHClient()
             cli.set_missing_host_key_policy(paramiko.AutoAddPolicy())
             try:
                 cli.connect(self.ip,22,self.ssh_u,self.ssh_p)
-                stdin, stdout, stderr = cli.exec_command("sh " + self.path + "/scripts/exp_dic.sh")
+                stdin, stdout, stderr = cli.exec_command("sh " + self.path + "/scripts/exp_dic.sh "+self.path)
                 outlist = stdout.readlines()
                 errlist = stderr.readlines()
                 if outlist:
