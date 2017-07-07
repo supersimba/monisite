@@ -46,6 +46,7 @@ function setSrcSyncActive(val) {
     }
 }
 function getSourceInfo(queue_id,trobj,i,trobj_plus) {
+    // var dt=new Date().Format("MMdd hh:mm:ss");
     $.ajax({
                 type:"POST",
                 async:true,
@@ -68,7 +69,7 @@ function getSourceInfo(queue_id,trobj,i,trobj_plus) {
                             trobj.children().eq(2).css({'color':'black','background':'white'});
                             trobj.children().eq(4).text(setSrcSyncStatus(callback["sync_status"]));
                             trobj.children().eq(5).text(setSrcSyncActive(callback["active"]));
-                            trobj.children().eq(6).text(callback["add_time"]);
+                            trobj.children().eq(6).text(callback["add_time"].substring(4));
                             trobj_plus.children().eq(0).children().eq(0).children('#span-dbps-num').text(callback['dbps_cnt']);
                             trobj_plus.children().eq(0).children().eq(0).children('#span-vag-num').text(callback['capture_cnt']);
                             trobj_plus.children().eq(0).children().eq(0).children('#span-sender-num').text(callback['sender_cnt']);

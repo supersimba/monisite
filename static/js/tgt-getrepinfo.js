@@ -69,7 +69,7 @@ function getTargetInfo(queue_id,trobj,i,trobj_plus) {
                             trobj.css({'background':'white','color':'black'});
                             trobj.children().eq(9).text(setSyncStatus(callback["sync_status"]));
                             trobj.children().eq(10).text(setSyncActive(callback["active"]));
-                            trobj.children().eq(11).text(callback["add_time"]);
+                            trobj.children().eq(11).text(callback["add_time"].substring(4));
                             trobj_plus.children().eq(0).children().eq(2).children('#span-vagnum').text(callback['collect_cnt']);
                             trobj_plus.children().eq(0).children().eq(2).children('#span-vagnum-err').text(callback['collect_err']);
                             trobj_plus.children().eq(0).children().eq(2).children('#span-loader-rate').text(callback['loader_rate']);
