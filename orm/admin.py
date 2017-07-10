@@ -13,6 +13,12 @@ class RepQueueAdmin(admin.ModelAdmin):
             obj.add_user=request.user.username
             print 'obj.add_user:',obj.add_user
             obj.save()
+    def get_queryset(self, request):
+        qs=super(RepQueueAdmin,self).get_queryset(request)
+        if request.user.is_superuser:
+            return qs
+        else:
+            return qs.filter(add_user=request.user)
 
 
 class SysLogsAdmin(admin.ModelAdmin):
